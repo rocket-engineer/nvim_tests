@@ -1,10 +1,11 @@
 
 set nocompatible
 filetype plugin indent on
-
 call plug#begin('~/.env/nvim/plugins')
 Plug 'folke/tokyonight.nvim'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'sheerun/vim-wombat-scheme'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
@@ -30,47 +31,20 @@ let mapleader=","          " set map leader key
 
 " set colorcolumn=80
 
-lua << EOF
--- fix for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
--- vim.wo.colorcolumn = "99999"
--- vim.opt.list = true
--- vim.opt.listchars:append("space:⋅")
--- vim.opt.listchars:append("eol:↴")
-EOF
-
 " ================================================================================
-
-" let g:tokyonight_style = "night"
-" let g:tokyonight_italic_functions = 1
-" let g:tokyonight_italic_variables = 0
-" colorscheme tokyonight
 
 if (has("termguicolors"))
   set termguicolors
 endif
 
+set background=dark
+" colorscheme gruvbox8_hard
+colorscheme wombat
+
 " ================================================================================
 
 lua << EOF
 -- require("telescope").setup() {
--- }
-EOF
-
-" ================================================================================
-
-lua << EOF
--- require("nvim-treesitter.configs").setup {
---   ensure_installed = {
---     "lua",
---     "vim"
---   },
---   highlight = { 
---     enable = true,
---     use_languagetree = true
---   },
---   indent = {
---     enable = true
---   }
 -- }
 EOF
 
