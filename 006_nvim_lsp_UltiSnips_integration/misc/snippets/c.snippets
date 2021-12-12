@@ -1,0 +1,32 @@
+
+snippet date
+${2:${1:`date +%d`}.`date +%m`}.`date +%Y`
+endsnippet
+
+snippet main
+int main() {
+  return 0;
+}
+endsnippet
+
+# preprocessor
+snippet inc
+#include <${1:stdio}.h>
+endsnippet
+
+snippet Inc
+#include "${1:`UltiSnips#Filename("$1.h")`}"
+endsnippet
+
+snippet once
+#ifndef ${1:`toupper(UltiSnips#Filename('$1_H', 'UNTITLED_H'))`}
+#define $1
+
+${0}
+
+#endif /* end of include guard: $1 */
+endsnippet
+
+snippet pr "This is my new printf"
+printf("${1:${VISUAL:text}}\n");
+endsnippet
