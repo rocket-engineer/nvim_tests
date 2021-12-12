@@ -3,9 +3,12 @@ set nocompatible
 filetype plugin indent on
 
 call plug#begin('~/.env/nvim/plugins')
-Plug 'folke/tokyonight.nvim'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'sheerun/vim-wombat-scheme'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'kyazdani42/nvim-web-devicons'
+
+Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 
 " ================================================================================
@@ -37,13 +40,14 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme gruvbox8_hard
+" colorscheme gruvbox8_hard
+colorscheme wombat
+" let g:gruvbox_plugin_hi_groups = 1
 
 " ================================================================================
 
 lua << EOF
--- require("telescope").setup() {
--- }
+require('lualine').setup()
 EOF
 
 " ================================================================================
