@@ -12,7 +12,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jdhao/better-escape.vim'
 
-" test
+" DAP
 Plug 'mfussenegger/nvim-dap'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'rcarriga/nvim-dap-ui'
@@ -93,10 +93,10 @@ dap.configurations.cpp = {
     type    = "lldb",
     request = "launch",
     name    = "Launch",
-    -- program = function()
-    --   return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    -- end,
-    program = "/home/man-behind-moon/Misc/Tests/02_C/build/hello_world",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    -- program = "/home/man-behind-moon/Misc/Tests/02_C/build/hello_world",
     cwd = '${workspaceFolder}',
     stopOnEntry = false,
     args = {},
@@ -148,7 +148,7 @@ nnoremap <S-k> :lua require('dap').step_into()<CR>
 nnoremap <S-l> :lua require('dap').step_out()<CR>
 nnoremap <leader>dk :lua require('dap').up()<CR>
 nnoremap <leader>dj :lua require('dap').down()<CR>
-nnoremap <leader>dj :lua require('dap').list_breakpoints()<CR>
+nnoremap <leader>dl :lua require('dap').list_breakpoints()<CR>
 
 " ================================================================================
 
