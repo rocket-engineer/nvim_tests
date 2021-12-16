@@ -27,7 +27,11 @@ set smartindent            " auto indent after new line
 
 let mapleader=","          " set map leader key
 
-" set colorcolumn=80
+" ================================================================================
+
+" Edit and reload init.vim quickly
+nnoremap <silent> <leader>nr :<C-U>tabnew $MYVIMRC <bar> tcd %:h<cr>
+nnoremap <silent> <leader>ne :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC <bar> call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config'})<cr>
 
 " ================================================================================
 
@@ -35,13 +39,15 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-set background=dark
 colorscheme gruvbox8_hard
+
+set background=dark
 
 " ================================================================================
 
-
 lua << EOF
+vim.notify = require("notify")
+
 require("notify").setup({
   -- Animation style (see below for details)
   stages = "fade_in_slide_out",
@@ -75,7 +81,6 @@ require("notify").setup({
     TRACE = "✎",
   },
 })
-require("notify")("My super important message")
 EOF
 
 " ================================================================================
