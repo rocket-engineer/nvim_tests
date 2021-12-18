@@ -7,7 +7,8 @@ call plug#begin('~/.env/nvim/plugins')
 " coloring
 Plug 'pacha/vem-dark'
 Plug 'folke/tokyonight.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " tab page appearance
 Plug 'nvim-lualine/lualine.nvim'
@@ -29,7 +30,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path',
 Plug 'quangnguyen30192/cmp-nvim-ultisnips',
 "Plug 'glepnir/lspsaga.nvim'
-Plug 'tami6/lspsaga.nvim',
+Plug 'tami5/lspsaga.nvim',
 Plug 'onsails/lspkind-nvim'
 
 " functionality
@@ -37,7 +38,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'glepnir/dashboard-nvim'
-" Plug 'akinsho/toggleterm'
+Plug 'akinsho/toggleterm.nvim'
 Plug 'rcarriga/nvim-notify'
 
 " misc
@@ -48,6 +49,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'jdhao/better-escape.vim'
+
 call plug#end()
 
 " ================================================================================
@@ -179,7 +181,7 @@ luafile ~/.env/nvim/config/notify.lua
 luafile ~/.env/nvim/config/nvim-tree.lua
 luafile ~/.env/nvim/config/indent-blankline.lua
 luafile ~/.env/nvim/config/telescope.lua
-" luafile ~/.env/nvim/config/toggleterm.lua
+luafile ~/.env/nvim/config/toggleterm.lua
 luafile ~/.env/nvim/config/treesitter.lua
 luafile ~/.env/nvim/config/lsp/cmp.lua
 luafile ~/.env/nvim/config/lsp/lspsaga.lua
