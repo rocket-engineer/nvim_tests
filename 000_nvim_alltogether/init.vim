@@ -16,19 +16,20 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'liuchengxu/vista.vim'
 
+" functionality
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'glepnir/dashboard-nvim'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'rcarriga/nvim-notify'
+
 " code
 Plug 'numToStr/Comment.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'lewis6991/gitsigns.nvim'
 " Plug 'tpope/vim-fugitive'
 Plug 'alepez/vim-gtest'
-
-" LSP
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-"Plug 'glepnir/lspsaga.nvim'
-Plug 'tami5/lspsaga.nvim',
-Plug 'onsails/lspkind-nvim'
 
 " code completion
 Plug 'hrsh7th/nvim-cmp'
@@ -38,13 +39,15 @@ Plug 'hrsh7th/cmp-path',
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips',
 
-" functionality
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'glepnir/dashboard-nvim'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'rcarriga/nvim-notify'
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+"Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim',
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'onsails/lspkind-nvim'
+
+" DAP
 
 " misc
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -176,22 +179,23 @@ highlight GitSignsDelete guifg=#F00000
 "lua require('nvim-autopairs').setup{}
 
 source ~/.env/nvim/config/dashboard.vim
-source ~/.env/nvim/config/ultisnips.vim
 source ~/.env/nvim/config/delimite_mate.vim
+source ~/.env/nvim/config/ultisnips.vim
 
 luafile ~/.env/nvim/config/comment.lua
 luafile ~/.env/nvim/config/gitsigns.lua
 luafile ~/.env/nvim/config/googletest.vim
+luafile ~/.env/nvim/config/indent-blankline.lua
 luafile ~/.env/nvim/config/lualine.lua
 luafile ~/.env/nvim/config/notify.lua
 luafile ~/.env/nvim/config/nvim-tree.lua
-luafile ~/.env/nvim/config/indent-blankline.lua
 luafile ~/.env/nvim/config/telescope.lua
 luafile ~/.env/nvim/config/toggleterm.lua
 luafile ~/.env/nvim/config/treesitter.lua
 luafile ~/.env/nvim/config/lsp/cmp.lua
-luafile ~/.env/nvim/config/lsp/lspsaga.lua
 luafile ~/.env/nvim/config/lsp/installer.lua
+luafile ~/.env/nvim/config/lsp/lspsaga.lua
+luafile ~/.env/nvim/config/lsp/null_ls.lua
 
 " ================================================================================
 
