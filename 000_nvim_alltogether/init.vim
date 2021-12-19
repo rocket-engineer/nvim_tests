@@ -15,6 +15,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'liuchengxu/vista.vim'
+Plug 'seblj/nvim-tabline'
 
 " functionality
 Plug 'nvim-lua/plenary.nvim'
@@ -181,6 +182,8 @@ highlight GitSignsDelete guifg=#F00000
 source ~/.env/nvim/config/dashboard.vim
 source ~/.env/nvim/config/delimite_mate.vim
 source ~/.env/nvim/config/ultisnips.vim
+
+luafile ~/.env/nvim/config/tabline.lua
 
 luafile ~/.env/nvim/config/comment.lua
 luafile ~/.env/nvim/config/gitsigns.lua
