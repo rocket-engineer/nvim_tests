@@ -2,157 +2,29 @@
 set nocompatible
 filetype plugin indent on
 
-call plug#begin('~/.env/nvim/plugins')
-
-" coloring
-Plug 'pacha/vem-dark'
-Plug 'folke/tokyonight.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'kyazdani42/nvim-web-devicons'
-
-" work page appearance
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'liuchengxu/vista.vim'
-Plug 'seblj/nvim-tabline'
-
-" functionality
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'glepnir/dashboard-nvim'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'rcarriga/nvim-notify'
-
-" code
-Plug 'numToStr/Comment.nvim'
-Plug 'SirVer/ultisnips'
-Plug 'lewis6991/gitsigns.nvim'
-" Plug 'tpope/vim-fugitive'
-Plug 'alepez/vim-gtest'
-
-" code completion
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-path',
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips',
-
-" LSP
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-"Plug 'glepnir/lspsaga.nvim'
-Plug 'tami5/lspsaga.nvim',
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'onsails/lspkind-nvim'
-
-" DAP
-
-" misc
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'djoshea/vim-autoread'
-"Plug 'windwp/nvim-autopairs'
-Plug 'Raimondi/delimitMate'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'jdhao/better-escape.vim'
-
-call plug#end()
+lua require('config.general')
+lua require('config.plugins')
 
 " ================================================================================
 
 syntax on                  " enable syntax
-"set t_Co=256              " set number of colors
-" set mouse=a                " enable mouse
-" set mousehide              " hide the mouse cursor while typing
-" set number                 " enable row numbers
-" set nowrap                 " display long lines as just one single line
-" set cursorline             " show cursor line
-" set tabstop=2              " change the number of space characters for the tab key
-" set shiftwidth=2           " change the number of space characters for indentation
 " set softtabstop=2
-" set expandtab              " convert tabs to spaces
-" set expandtab
-" set smarttab
-" set autoindent           " auto indent after new line
 " set smartindent            " auto indent after new line
-" set splitright
 " set colorcolumn=80
 " set completeopt=menu,menuone,noselect
-
-lua << EOF
-local options = {
-
-  -- general settings
-  mouse        = "a",                      -- allow the mouse to be used in neovim
-  -- mousehide = true,
-  number       = true,                     -- set numbered lines
-  wrap         = false,                    -- display lines as one long line
-  updatetime   = 300,                      -- faster completion (4000ms default)
-  fileencoding = "utf-8",                  -- the encoding written to a file
-  showmode     = true,                    -- we don't need to see things like -- INSERT -- anymore
-  splitbelow   = true,                     -- force all horizontal splits to go below current window
-  splitright   = true,                     -- force all vertical splits to go to the right of current window
-
-  -- indentation settings
-  tabstop    = 2,                          -- insert 2 spaces for a tab
-  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-  expandtab  = true,                       -- convert tabs to spaces
-  autoindent = true,                       -- use the indent from the previous line
-  cindent    = true,                       -- use C-indentation style
-  -- smartindent = true,                      -- make indenting smarter again
-
-  -- appearance settings
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
-  -- colorscheme   = tokyonight,              -- set default color scheme
-  -- background    = "dark",                  -- use a dark background
-  cursorline     = true,                   -- highlight the current line
-  relativenumber = false,                  -- set relative numbered lines
-  showtabline    = 2,                      -- always show tabline
-  signcolumn     = "yes",                  -- always show the sign column, otherwise it would shift the text each time
-  -- numberwidth = 4,                         -- set number column width to 2 {default 4}
-
-  -- backup and swap settings
-  -- backup    = true,                        -- creates a backup file
-  -- backupdir = "~/.env/nvim/backup"
-  -- writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-
-  -- miscellaneous settings
-  -- clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  -- cmdheight = 2,                           -- more space in the neovim command line for displaying messages
-  -- completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  -- conceallevel = 0,                        -- so that `` is visible in markdown files
-  -- hlsearch = true,                         -- highlight all matches on previous search pattern
-  -- ignorecase = true,                       -- ignore case in search patterns
-  -- pumheight = 10,                          -- pop up menu height
-  -- smartcase = true,                        -- smart case
-  -- swapfile = false,                        -- creates a swapfile
-  -- timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
-  -- undofile = true,                         -- enable persistent undo
-  -- scrolloff = 8,                           -- is one of my fav
-  -- sidescrolloff = 8,
-  -- guifont = "monospace:h17",               -- the font used in graphical neovim applications
-}
-
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
-EOF
 
 let mapleader=","          " set map leader key
 
 " ================================================================================
 
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 let g:tokyonight_style = "night"
 " let g:tokyonight_italic_functions = 1
 " let g:tokyonight_italic_variables = 0
 colorscheme tokyonight
-
-" if (has("termguicolors"))
-"   set termguicolors
-" endif
 
 let g:better_whitespace_enabled = 0
 
@@ -181,24 +53,23 @@ highlight GitSignsDelete guifg=#F00000
 
 source ~/.env/nvim/config/dashboard.vim
 source ~/.env/nvim/config/delimite_mate.vim
+source ~/.env/nvim/config/googletest.vim
 source ~/.env/nvim/config/ultisnips.vim
 
-luafile ~/.env/nvim/config/tabline.lua
-
-luafile ~/.env/nvim/config/comment.lua
-luafile ~/.env/nvim/config/gitsigns.lua
-luafile ~/.env/nvim/config/googletest.vim
-luafile ~/.env/nvim/config/indent-blankline.lua
-luafile ~/.env/nvim/config/lualine.lua
-luafile ~/.env/nvim/config/notify.lua
-luafile ~/.env/nvim/config/nvim-tree.lua
-luafile ~/.env/nvim/config/telescope.lua
-luafile ~/.env/nvim/config/toggleterm.lua
-luafile ~/.env/nvim/config/treesitter.lua
-luafile ~/.env/nvim/config/lsp/cmp.lua
-luafile ~/.env/nvim/config/lsp/installer.lua
-luafile ~/.env/nvim/config/lsp/lspsaga.lua
-luafile ~/.env/nvim/config/lsp/null_ls.lua
+lua require('config.comment')
+lua require('config.gitsigns')
+lua require('config.indent_blankline')
+lua require('config.lualine')
+lua require('config.notify')
+lua require('config.nvim_tree')
+lua require('config.tabline')
+lua require('config.telescope')
+lua require('config.toggleterm')
+lua require('config.treesitter')
+lua require('config.lsp.cmp')
+lua require('config.lsp.installer')
+lua require('config.lsp.lspsaga')
+lua require('config.lsp.null_ls')
 
 " ================================================================================
 
