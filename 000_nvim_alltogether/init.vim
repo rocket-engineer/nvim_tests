@@ -9,13 +9,15 @@ Plug 'pacha/vem-dark'
 Plug 'folke/tokyonight.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'kyazdani42/nvim-web-devicons'
 
-" tab page appearance
+" work page appearance
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'liuchengxu/vista.vim'
 
 " code
+Plug 'numToStr/Comment.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'lewis6991/gitsigns.nvim'
 " Plug 'tpope/vim-fugitive'
@@ -23,15 +25,18 @@ Plug 'alepez/vim-gtest'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-path',
-Plug 'quangnguyen30192/cmp-nvim-ultisnips',
+Plug 'williamboman/nvim-lsp-installer'
 "Plug 'glepnir/lspsaga.nvim'
 Plug 'tami5/lspsaga.nvim',
 Plug 'onsails/lspkind-nvim'
+
+" code completion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-path',
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips',
 
 " functionality
 Plug 'nvim-lua/plenary.nvim'
@@ -43,7 +48,7 @@ Plug 'rcarriga/nvim-notify'
 
 " misc
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
+Plug 'djoshea/vim-autoread'
 "Plug 'windwp/nvim-autopairs'
 Plug 'Raimondi/delimitMate'
 Plug 'norcalli/nvim-colorizer.lua'
@@ -174,6 +179,7 @@ source ~/.env/nvim/config/dashboard.vim
 source ~/.env/nvim/config/ultisnips.vim
 source ~/.env/nvim/config/delimite_mate.vim
 
+luafile ~/.env/nvim/config/comment.lua
 luafile ~/.env/nvim/config/gitsigns.lua
 luafile ~/.env/nvim/config/googletest.vim
 luafile ~/.env/nvim/config/lualine.lua
@@ -185,6 +191,7 @@ luafile ~/.env/nvim/config/toggleterm.lua
 luafile ~/.env/nvim/config/treesitter.lua
 luafile ~/.env/nvim/config/lsp/cmp.lua
 luafile ~/.env/nvim/config/lsp/lspsaga.lua
+luafile ~/.env/nvim/config/lsp/installer.lua
 
 " ================================================================================
 

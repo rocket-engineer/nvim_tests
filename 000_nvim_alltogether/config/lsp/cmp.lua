@@ -1,5 +1,4 @@
 
--- lua << EOF
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 local has_any_words_before = function()
@@ -143,11 +142,48 @@ cmp.setup.cmdline(':', {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
--- Clangd Config
+-- LSP config: Clangd
 require("lspconfig").clangd.setup{
-  cmd = {"clangd-12", "--background-index"},
-  filetypes = {"c", "cpp", "cxx", ".cu"},
+  -- cmd = {"clangd-12", "--background-index"},
+  cmd = {"/home/man-behind-moon/.local/share/nvim/lsp_servers/clangd/clangd", "--background-index"},
+  filetypes    = {"c", "cpp", "cxx", ".cu"},
   capabilities = capabilities,
 }
--- EOF
+
+-- LSP config: pyright
+require("lspconfig").pyright.setup{
+  cmd = {"/home/man-behind-moon/.local/share/nvim/lsp_servers/python/node_modules/pyright/langserver.index.js", "--stdio"},
+  -- filetypes = {"python"},
+  -- root_dir = function(startpath)
+  --     return M.search_ancestors(startpath, matcher)
+  --   end,
+  --   settings = {
+  --     python = {
+  --       analysis = {
+  --         autoSearchPaths = true,
+  --         diagnosticMode = "workspace",
+  --         useLibraryCodeForTypes = true
+  --       }
+  --     }
+  --   }
+  single_file_support = true,
+}
+
+-- LSP config: fortls
+require("lspconfig").fortls.setup{
+  cmd = {"/home/man-behind-moon/.local/share/nvim/lsp_servers/fortls/venv/bin/fortls"},
+  -- filetypes = {"fortran"},
+  -- root_dir = function(startpath)
+  --    return M.search_ancestors(startpath, matcher)
+  --  end,
+  --  settings = {
+  --    python = {
+  --      analysis = {
+  --        autoSearchPaths = true,
+  --        diagnosticMode = "workspace",
+  --        useLibraryCodeForTypes = true
+  --      }
+  --    }
+  --  }
+}
 
