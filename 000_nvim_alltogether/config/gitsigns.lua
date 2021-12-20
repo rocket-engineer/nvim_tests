@@ -1,6 +1,9 @@
+local status_ok, gitsigns = pcall(require, "gitsigns")
+if not status_ok then
+  return
+end
 
--- lua << EOF
-require('gitsigns').setup {
+gitsigns.setup({
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
     change       = {hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
@@ -38,6 +41,4 @@ require('gitsigns').setup {
   sign_priority = 6,
   update_debounce = 100,
   status_formatter = nil, -- Use default
-}
--- EOF
-
+})

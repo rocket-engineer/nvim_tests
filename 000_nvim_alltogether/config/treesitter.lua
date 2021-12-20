@@ -1,6 +1,9 @@
+local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+  return
+end
 
--- lua << EOF
-require("nvim-treesitter.configs").setup {
+treesitter.setup({
   ensure_installed = {
     "c",
     "cpp",
@@ -15,6 +18,4 @@ require("nvim-treesitter.configs").setup {
   indent = {
     enable = true
   }
-}
--- EOF
-
+})

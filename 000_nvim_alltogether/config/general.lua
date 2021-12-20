@@ -21,7 +21,7 @@ local options = {
   -- smartindent = true,                      -- make indenting smarter again
 
   -- appearance settings
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
+  termguicolors = true,                    -- set term gui colors (most terminals support this)
   -- colorscheme   = tokyonight,              -- set default color scheme
   -- background    = "dark",                  -- use a dark background
   cursorline     = true,                   -- highlight the current line

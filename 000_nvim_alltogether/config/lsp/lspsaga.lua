@@ -1,15 +1,21 @@
+local status_ok, lspsaga = pcall(require, "lspsaga")
+if not status_ok then
+  return
+end
 
--- lua << EOF
-local lspsaga = require('lspsaga')
-lspsaga.setup { -- defaults ...
+lspsaga.setup({
+
+  -- defaults ...
   debug = false,
   use_saga_diagnostic_sign = true,
+
   -- diagnostic sign
   error_sign = "",
   warn_sign = "",
   hint_sign = "",
   infor_sign = "",
   dianostic_header_icon = "   ",
+  
   -- code action title icon
   code_action_icon = " ",
   code_action_prompt = {
@@ -42,6 +48,4 @@ lspsaga.setup { -- defaults ...
   rename_prompt_prefix = "➤",
   server_filetype_map = {},
   diagnostic_prefix_format = "%d. ",
-}
--- EOF
-
+})

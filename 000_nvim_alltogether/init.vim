@@ -2,8 +2,9 @@
 set nocompatible
 filetype plugin indent on
 
-lua require('config.general')
-lua require('config.plugins')
+luafile ~/.env/nvim/config/general.lua
+luafile ~/.env/nvim/config/plugins.lua
+luafile ~/.env/nvim/config/coloring.lua
 
 " ================================================================================
 
@@ -17,31 +18,13 @@ let mapleader=","          " set map leader key
 
 " ================================================================================
 
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-let g:tokyonight_style = "night"
-" let g:tokyonight_italic_functions = 1
-" let g:tokyonight_italic_variables = 0
-colorscheme tokyonight
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 
 let g:better_whitespace_enabled = 0
 
 let g:better_escape_shortcut = 'jk'
-
-" ================================================================================
-
-" Colors
-" ======
-
-" change guisp for different colour
-highlight IndentBlanklineContextStart guisp=#00FF00 gui=underline
-
-" gitsigns
-highlight GitSignsAdd    guifg=#00FF00
-highlight GitSignsChange guifg=#F0EF00
-highlight GitSignsDelete guifg=#F00000
 
 " ================================================================================
 
@@ -56,20 +39,33 @@ source ~/.env/nvim/config/delimite_mate.vim
 source ~/.env/nvim/config/googletest.vim
 source ~/.env/nvim/config/ultisnips.vim
 
-lua require('config.comment')
-lua require('config.gitsigns')
-lua require('config.indent_blankline')
-lua require('config.lualine')
-lua require('config.notify')
-lua require('config.nvim_tree')
-lua require('config.tabline')
-lua require('config.telescope')
-lua require('config.toggleterm')
-lua require('config.treesitter')
-lua require('config.lsp.cmp')
-lua require('config.lsp.installer')
-lua require('config.lsp.lspsaga')
-lua require('config.lsp.null_ls')
+luafile ~/.env/nvim/config/comment.lua
+luafile ~/.env/nvim/config/gitsigns.lua
+luafile ~/.env/nvim/config/indent_blankline.lua
+luafile ~/.env/nvim/config/lualine.lua
+luafile ~/.env/nvim/config/notify.lua
+luafile ~/.env/nvim/config/nvim_tree.lua
+luafile ~/.env/nvim/config/tabline.lua
+luafile ~/.env/nvim/config/telescope.lua
+luafile ~/.env/nvim/config/toggleterm.lua
+luafile ~/.env/nvim/config/treesitter.lua
+luafile ~/.env/nvim/config/lsp/cmp.lua
+luafile ~/.env/nvim/config/lsp/installer.lua
+luafile ~/.env/nvim/config/lsp/lspsaga.lua
+luafile ~/.env/nvim/config/lsp/null_ls.lua
+
+" ================================================================================
+
+" Colors
+" ======
+
+" change guisp for different colour
+highlight IndentBlanklineContextStart guisp=#00FF00 gui=underline
+
+" gitsigns
+highlight GitSignsAdd    guifg=#00FF00
+highlight GitSignsChange guifg=#F0EF00
+highlight GitSignsDelete guifg=#F00000
 
 " ================================================================================
 

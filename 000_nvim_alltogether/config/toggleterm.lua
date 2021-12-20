@@ -1,5 +1,9 @@
+local status_ok, toggleterm = pcall(require, "toggleterm")
+if not status_ok then
+  return
+end
 
-require("toggleterm").setup({
+toggleterm.setup({
 	size = 20,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
@@ -35,7 +39,7 @@ function _HTOP_TOGGLE()
 	htop:toggle()
 end
 
-local python = Terminal:new({ cmd = "python", hidden = true })
+local python = Terminal:new({ cmd = "python3", hidden = true })
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
@@ -43,4 +47,3 @@ end
 vim.api.nvim_set_keymap("n", "<leader>h", "<cmd>lua _HTOP_TOGGLE()<CR>",    {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>p", "<cmd>lua _PYTHON_TOGGLE()<CR>",  {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", {noremap = true, silent = true})
-

@@ -1,5 +1,9 @@
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
 
-require('telescope').setup {
+telescope.setup({
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
@@ -9,7 +13,7 @@ require('telescope').setup {
                                        -- the default case_mode is "smart_case"
     }
   }
-}
+})
 
-require('telescope').load_extension('fzf')
+telescope.load_extension('fzf')
 
