@@ -49,6 +49,9 @@ luafile ~/.env/nvim/config/tabline.lua
 luafile ~/.env/nvim/config/telescope.lua
 luafile ~/.env/nvim/config/toggleterm.lua
 luafile ~/.env/nvim/config/treesitter.lua
+luafile ~/.env/nvim/config/dap/dap.lua
+luafile ~/.env/nvim/config/dap/dapui.lua
+luafile ~/.env/nvim/config/dap/dap_virtual_text.lua
 luafile ~/.env/nvim/config/lsp/cmp.lua
 luafile ~/.env/nvim/config/lsp/installer.lua
 luafile ~/.env/nvim/config/lsp/lspconfig.lua
@@ -94,7 +97,7 @@ nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
 nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
 nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
 
-" lsp
+" LSP
 nnoremap <silent> <leader>ld <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <leader>lD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
@@ -113,11 +116,28 @@ nnoremap <silent> <leader>ca <cmd>lua require('lspsaga.codeaction').code_action(
 "vnoremap <silent> <leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
 nnoremap <silent> <leader>ch <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
 
+" DAP
+nnoremap <leader>db :lua require('dap').toggle_breakpoint()<CR>
+nnoremap <leader>dr :lua require('dap.repl').toggle()<CR>
+nnoremap <leader>dn :lua require('dap').continue()<CR>
+nnoremap <leader>d_ :lua require('dap').run_last()<CR>
+nnoremap <leader>dq :lua require('dap').disconnect()<CR>
+nnoremap <leader>d? :lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>
+nnoremap <S-j> :lua require('dap').step_over()<CR>
+nnoremap <S-k> :lua require('dap').step_into()<CR>
+nnoremap <S-l> :lua require('dap').step_out()<CR>
+nnoremap <leader>dk :lua require('dap').up()<CR>
+nnoremap <leader>dj :lua require('dap').down()<CR>
+nnoremap <leader>dl :lua require('dap').list_breakpoints()<CR>
+
 " googletest
 nnoremap <leader>tr <cmd>GTestRun<cr>
 nnoremap <leader>tc <cmd>GTestRunUnderCursor<cr>
 nnoremap ]t <cmd>GTestNext<cr>
 nnoremap [t <cmd>GTestPrev<cr>
+nnoremap <leader>du :lua require('dapui').toggle()<CR>
+nnoremap <leader>di :lua require('dapui').eval()<CR>
+nnoremap <leader>df :lua require('dapui').float_element()<CR>
 
 " ================================================================================
 

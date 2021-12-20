@@ -71,6 +71,9 @@ return require('packer').startup(function(use)
   use {'onsails/lspkind-nvim'}
 
   -- DAP
+  use {'mfussenegger/nvim-dap'}
+  use {'theHamsta/nvim-dap-virtual-text'}
+  use {'rcarriga/nvim-dap-ui'}
 
   -- misc
   use {'lukas-reineke/indent-blankline.nvim'}
