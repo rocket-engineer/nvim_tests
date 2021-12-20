@@ -5,10 +5,21 @@ end
 
 treesitter.setup({
   ensure_installed = {
+    "bash",
+    "bibtex",
     "c",
     "cpp",
+    "cuda",
     "cmake",
+    "fortran",
+    "java",
+    "json",
+    "latex",
     "lua",
+    "make",
+    "python",
+    "rst",
+    "yaml",
     "vim"
   },
   highlight = { 
