@@ -38,4 +38,3 @@ lsp_installer.settings({
   -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- 	server:setup(opts)
 -- end)
-
