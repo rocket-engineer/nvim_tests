@@ -51,6 +51,7 @@ luafile ~/.env/nvim/config/toggleterm.lua
 luafile ~/.env/nvim/config/treesitter.lua
 luafile ~/.env/nvim/config/lsp/cmp.lua
 luafile ~/.env/nvim/config/lsp/installer.lua
+luafile ~/.env/nvim/config/lsp/lspconfig.lua
 luafile ~/.env/nvim/config/lsp/lspsaga.lua
 luafile ~/.env/nvim/config/lsp/null_ls.lua
 
