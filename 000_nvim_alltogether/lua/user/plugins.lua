@@ -92,7 +92,7 @@ require('packer').startup(function(use)
   -- code
   -- use {'numToStr/Comment.nvim'}
   -- use {'SirVer/ultisnips'}
-  -- use {'lewis6991/gitsigns.nvim'}
+  use {'lewis6991/gitsigns.nvim'}
   -- use 'tpope/vim-fugitive'
   -- use {'alepez/vim-gtest'}
 

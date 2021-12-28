@@ -44,16 +44,14 @@ require('user.reload')
 require('user.treesitter')
 require('user.indentation')
 require('user.toggleterm')
+require('user.gitsigns')
 
--- luafile ~/.env/nvim/config/indent_blankline.lua
 -- luafile ~/.env/nvim/config/comment.lua
--- luafile ~/.env/nvim/config/gitsigns.lua
 -- luafile ~/.env/nvim/config/lualine.lua
 -- luafile ~/.env/nvim/config/notify.lua
 -- luafile ~/.env/nvim/config/nvim_tree.lua
 -- luafile ~/.env/nvim/config/tabline.lua
 require('user.telescope')
--- luafile ~/.env/nvim/config/toggleterm.lua
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua
@@ -70,11 +68,6 @@ require('user.telescope')
 
 -- change guisp for different colour
 -- highlight IndentBlanklineContextStart guisp=#00FF00 gui=underline
-
--- gitsigns
--- highlight GitSignsAdd    guifg=#00FF00
--- highlight GitSignsChange guifg=#F0EF00
--- highlight GitSignsDelete guifg=#F00000
 
 -- ================================================================================
 
