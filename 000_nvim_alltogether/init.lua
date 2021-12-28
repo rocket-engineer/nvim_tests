@@ -49,10 +49,11 @@ require('user.notify')
 require('user.lualine')
 require('user.tabline')
 
+require('user.cmp')
+
 require('user.telescope')
 
 -- luafile ~/.env/nvim/config/nvim_tree.lua
--- luafile ~/.env/nvim/config/tabline.lua
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua

@@ -100,12 +100,13 @@ require('packer').startup(function(use)
   -- use {'alepez/vim-gtest'}
 
   -- code completion
-  -- use {'hrsh7th/nvim-cmp'}
-  -- use {'hrsh7th/cmp-buffer'}
-  -- use {'hrsh7th/cmp-cmdline'}
-  -- use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-cmdline'}
   -- use {'hrsh7th/cmp-nvim-lsp'}
   -- use {'quangnguyen30192/cmp-nvim-ultisnips'}
+  use {'onsails/lspkind-nvim'}
 
   -- LSP
   -- use {'neovim/nvim-lspconfig'}
@@ -113,7 +114,6 @@ require('packer').startup(function(use)
   -- use 'glepnir/lspsaga.nvim'
   -- use {'tami5/lspsaga.nvim'}
   -- use {'jose-elias-alvarez/null-ls.nvim'}
-  -- use {'onsails/lspkind-nvim'}
 
   -- DAP
   -- use {'mfussenegger/nvim-dap'}
