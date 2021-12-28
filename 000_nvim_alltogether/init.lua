@@ -25,8 +25,6 @@ require('user.coloring')
 
 -- let g:better_whitespace_enabled = 0
 
--- let g:better_escape_shortcut = 'jk'
-
 -- ================================================================================
 
 -- Plugin Configs
@@ -47,12 +45,14 @@ require('user.toggleterm')
 require('user.gitsigns')
 require('user.comment')
 require('user.notify')
+require('user.lualine')
+
+require('user.telescope')
 
 -- luafile ~/.env/nvim/config/lualine.lua
 -- luafile ~/.env/nvim/config/notify.lua
 -- luafile ~/.env/nvim/config/nvim_tree.lua
 -- luafile ~/.env/nvim/config/tabline.lua
-require('user.telescope')
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua

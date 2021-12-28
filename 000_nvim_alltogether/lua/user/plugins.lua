@@ -60,17 +60,20 @@ require('packer').startup(function(use)
   use {'wbthomason/packer.nvim'}
   use {
     'famiu/nvim-reload',
-    requires = {{'nvim-lua/plenary.nvim', opt = false}}
+    requires = {'nvim-lua/plenary.nvim', opt = false}
   }
 
   -- coloring
   -- use {'pacha/vem-dark'}
   use {'folke/tokyonight.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  -- use {'kyazdani42/nvim-web-devicons'}
+  use {'kyazdani42/nvim-web-devicons'}
 
   -- work page appearance
-  -- use {'nvim-lualine/lualine.nvim'}
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
   -- use {'kyazdani42/nvim-tree.lua'}
   -- use {'liuchengxu/vista.vim'}
   -- use {'seblj/nvim-tabline'}
@@ -78,11 +81,11 @@ require('packer').startup(function(use)
   -- functionality
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim', opt = false}}
+    requires = {'nvim-lua/plenary.nvim', opt = false}
   }
   use {
     'nvim-telescope/telescope-fzf-native.nvim',
-    requires = {{'nvim-telescope/telescope.nvim', opt = false}},
+    requires = {'nvim-telescope/telescope.nvim', opt = false},
     run = 'make'
   }
   -- use {'glepnir/dashboard-nvim'}
@@ -127,7 +130,7 @@ require('packer').startup(function(use)
   -- use {'Raimondi/delimitMate'}
   -- use {'norcalli/nvim-colorizer.lua'}
   -- use {'ntpeters/vim-better-whitespace'}
-  -- use {'jdhao/better-escape.vim'}
+  use {'jdhao/better-escape.vim'}
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then
