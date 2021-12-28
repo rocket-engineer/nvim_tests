@@ -61,10 +61,13 @@ notify.setup({
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
--- local opts = {silent = true, noremap = true}
+local opts = {silent = true, noremap = true}
 
 -- shorten function name
--- local keymap = vim.api.nvim_set_keymap
+local keymap = vim.api.nvim_set_keymap
 
--- keymap("n", "<leader>n1", "<cmd>lua require("notify")("My super important message")<CR>", opts)
+keymap("n", "<leader>n1", ":lua require('notify')(\"My super important error message\",   \"error\", {title = \"NVCode Notification\"})<CR>", opts)
+keymap("n", "<leader>n2", ":lua require('notify')(\"My super important warning message\", \"warn\",  {title = \"NVCode Notification\"})<CR>", opts)
+keymap("n", "<leader>n3", ":lua require('notify')(\"My super important info message\",    \"info\",  {title = \"NVCode Notification\"})<CR>", opts)
+keymap("n", "<leader>n4", ":lua require('notify')(\"My super important debug message\",   \"debug\", {title = \"NVCode Notification\"})<CR>", opts)
 
