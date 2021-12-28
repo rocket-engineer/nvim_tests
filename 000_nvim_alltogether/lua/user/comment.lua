@@ -1,7 +1,17 @@
+
+-- =================================================================================================
+-- Module Protection
+-- =================================================================================================
+
 local status_ok, Comment = pcall(require, "Comment")
 if not status_ok then
   return
 end
+
+
+-- =================================================================================================
+-- Configuration
+-- =================================================================================================
 
 Comment.setup({
 
@@ -20,8 +30,8 @@ Comment.setup({
 
   ---LHS of toggle mappings in NORMAL + VISUAL mode
   toggler = {
-    line  = '<leader>cc',
-    block = '<leader>bc',
+    line  = '<leader>dc',
+    block = '<leader>db',
   },
 
   ---LHS of operator-pending mappings in NORMAL + VISUAL mode
@@ -33,25 +43,15 @@ Comment.setup({
   ---LHS of extra mappings
   ---@type table
   extra = {
-    ---Add comment on the line above
-    above = 'gcO',
-    ---Add comment on the line below
-    below = 'gco',
-    ---Add comment at the end of line
-    eol = 'gcA',
+    above = '<leader>cp', -- add comment to the line above
+    below = '<leader>cn', -- add comment to the line below
+    eol   = '<leader>ce', -- add comment to the end of line
   },
 
   ---Create basic (operator-pending) and extended mappings for NORMAL + VISUAL mode
   mappings = {
-    ---Operator-pending mapping
-    ---Includes `gcc`, `gbc`, `gc[count]{motion}` and `gb[count]{motion}`
-    ---NOTE: These mappings can be changed individually by `opleader` and `toggler` config
-    basic = true,
-    ---Extra mapping
-    ---Includes `gco`, `gcO`, `gcA`
-    extra = false,
-    ---Extended mapping
-    ---Includes `g>`, `g<`, `g>[count]{motion}` and `g<[count]{motion}`
+    basic    = true,
+    extra    = true,
     extended = false,
   },
 
@@ -63,3 +63,4 @@ Comment.setup({
   ---@type fun(ctx: Ctx)
   post_hook = nil,
 })
+

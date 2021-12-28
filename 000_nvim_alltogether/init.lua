@@ -45,8 +45,8 @@ require('user.treesitter')
 require('user.indentation')
 require('user.toggleterm')
 require('user.gitsigns')
+require('user.comment')
 
--- luafile ~/.env/nvim/config/comment.lua
 -- luafile ~/.env/nvim/config/lualine.lua
 -- luafile ~/.env/nvim/config/notify.lua
 -- luafile ~/.env/nvim/config/nvim_tree.lua
