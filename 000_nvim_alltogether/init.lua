@@ -45,12 +45,12 @@ require('user.toggleterm')
 require('user.gitsigns')
 require('user.comment')
 require('user.notify')
+
 require('user.lualine')
+require('user.tabline')
 
 require('user.telescope')
 
--- luafile ~/.env/nvim/config/lualine.lua
--- luafile ~/.env/nvim/config/notify.lua
 -- luafile ~/.env/nvim/config/nvim_tree.lua
 -- luafile ~/.env/nvim/config/tabline.lua
 -- luafile ~/.env/nvim/config/dap/dap.lua

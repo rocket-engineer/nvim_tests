@@ -76,7 +76,7 @@ require('packer').startup(function(use)
   }
   -- use {'kyazdani42/nvim-tree.lua'}
   -- use {'liuchengxu/vista.vim'}
-  -- use {'seblj/nvim-tabline'}
+  use {'seblj/nvim-tabline'}
 
   -- functionality
   use {
@@ -130,7 +130,10 @@ require('packer').startup(function(use)
   -- use {'Raimondi/delimitMate'}
   -- use {'norcalli/nvim-colorizer.lua'}
   -- use {'ntpeters/vim-better-whitespace'}
-  use {'jdhao/better-escape.vim'}
+  use {
+    'jdhao/better-escape.vim',
+    event = 'InsertEnter'
+  }
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then

@@ -30,8 +30,8 @@ Comment.setup({
 
   ---LHS of toggle mappings in NORMAL + VISUAL mode
   toggler = {
-    line  = '<leader>dc',
-    block = '<leader>db',
+    line  = '<leader>cc',
+    block = '<leader>cb',
   },
 
   ---LHS of operator-pending mappings in NORMAL + VISUAL mode
