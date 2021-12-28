@@ -3,7 +3,7 @@
 -- Module Protection
 -- =================================================================================================
 
-local status_ok, reload = pcall(require, "nvim-reload")
+local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   return
 end
@@ -13,7 +13,33 @@ end
 -- Configuration
 -- =================================================================================================
 
--- reload.modules_reload_external = {}
+treesitter.setup({
+  ensure_installed = {
+    "bash",
+    "bibtex",
+    "c",
+    "cpp",
+    "cuda",
+    "cmake",
+    "fortran",
+    "java",
+    "json",
+    "latex",
+    "lua",
+    "make",
+    "python",
+    "rst",
+    "yaml",
+    "vim"
+  },
+  highlight = { 
+    enable = true,
+    use_languagetree = true
+  },
+  indent = {
+    enable = true
+  }
+})
 
 
 -- =================================================================================================
@@ -28,11 +54,8 @@ end
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
-local opts = { silent = true, noremap = true }
+-- local opts = { silent = true, noremap = true }
 
 -- shorten function name
-local keymap = vim.api.nvim_set_keymap
-
--- keymap("n", "<leader>pr", ":Restart<CR>", opts)
-keymap("n", "<leader>pr", ":Reload<CR>", opts)
+-- local keymap = vim.api.nvim_set_keymap
 

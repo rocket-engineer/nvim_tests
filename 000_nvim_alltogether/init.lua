@@ -48,9 +48,9 @@ require('user.reload')
 -- luafile ~/.env/nvim/config/notify.lua
 -- luafile ~/.env/nvim/config/nvim_tree.lua
 -- luafile ~/.env/nvim/config/tabline.lua
--- require('user.telescope')
+require('user.telescope')
 -- luafile ~/.env/nvim/config/toggleterm.lua
--- luafile ~/.env/nvim/config/treesitter.lua
+require('user.treesitter')
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua
@@ -77,17 +77,6 @@ require('user.reload')
 
 -- " Mappings
 -- " ========
-
--- " Telescope
--- nnoremap <leader>fb <cmd>Telescope file_browser<cr>
--- nnoremap <leader>ff <cmd>Telescope find_files<cr>
--- nnoremap <leader>fg <cmd>Telescope live_grep<cr>
--- nnoremap <leader>fh <cmd>Telescope help_tags<cr>
--- nnoremap <leader>fs <cmd>Telescope grep_string<cr>
--- nnoremap <leader>fo <cmd>Telescope oldfiles<cr>
--- nnoremap <leader>gc <cmd>Telescope git_commits<cr>
--- nnoremap <leader>gm <cmd>Telescope git_branches<cr>
--- nnoremap <leader>gS <cmd>Telescope git_stash<cr>
 
 -- " Dashboard
 -- nmap <Leader>ss :<C-u>SessionSave<CR>

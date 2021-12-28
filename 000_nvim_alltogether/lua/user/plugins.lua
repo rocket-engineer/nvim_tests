@@ -66,8 +66,7 @@ require('packer').startup(function(use)
   -- coloring
   -- use {'pacha/vem-dark'}
   use {'folke/tokyonight.nvim'}
-  -- use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  -- use 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   -- use {'kyazdani42/nvim-web-devicons'}
 
   -- work page appearance
@@ -77,10 +76,15 @@ require('packer').startup(function(use)
   -- use {'seblj/nvim-tabline'}
 
   -- functionality
-  -- use {'nvim-lua/plenary.nvim'}
-  -- use {'nvim-telescope/telescope.nvim'}
-  -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
-  -- use 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/plenary.nvim', opt = false}}
+  }
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    requires = {{'nvim-telescope/telescope.nvim', opt = false}},
+    run = 'make'
+  }
   -- use {'glepnir/dashboard-nvim'}
   -- use {'akinsho/toggleterm.nvim'}
   -- use {'rcarriga/nvim-notify'}
@@ -134,11 +138,6 @@ end)
 -- Keymaps
 -- =================================================================================================
 
-local opts = { silent = true, noremap = true }
-
--- shorten function name
-local keymap = vim.api.nvim_set_keymap
-
 -- Modes
 -- * normal_mode       -> "n",
 -- * insert_mode       -> "i",
@@ -147,6 +146,12 @@ local keymap = vim.api.nvim_set_keymap
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
+local opts = { silent = true, noremap = true }
+
+-- shorten function name
+local keymap = vim.api.nvim_set_keymap
+
 keymap("n", "<leader>ps", ":PackerSync<CR>",   opts)
 keymap("n", "<leader>pl", ":PackerStatus<CR>", opts)
+-- keymap("n", "<leader>pc", ":PackerClean<CR>",  opts)
 
