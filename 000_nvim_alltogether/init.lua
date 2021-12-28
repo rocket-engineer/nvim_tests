@@ -43,6 +43,7 @@ require('user.notify')
 require('user.lualine')
 require('user.tabline')
 
+require('user.lsp')
 require('user.cmp')
 
 require('user.telescope')

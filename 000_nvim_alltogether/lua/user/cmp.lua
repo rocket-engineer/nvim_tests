@@ -43,7 +43,7 @@ local kind_icons = {
 
 local menu_items = {
   buffer        = "[Buffer]",
-  -- nvim_lsp      = "[LSP]",
+  nvim_lsp      = "[LSP]",
   -- luasnip       = "[Snippet]",
   -- nvim_lua      = "[Lua]",
   -- latex_symbols = "[Latex]",
@@ -76,7 +76,7 @@ local lspkind = require('lspkind')
 cmp.setup({
 
   sources = {
-    -- {name = 'nvim_lsp'},
+    {name = 'nvim_lsp'},
     -- {name = "ultisnips"},
     {name = 'buffer'},
     {name = 'path'},
@@ -151,7 +151,7 @@ cmp.setup({
     --     "c",
     --   }),
   },
-  
+    
   formatting = {
     -- format = function(entry, vim_item)
     --   -- local prsnt, lspkind = pcall(require, "lspkind")
@@ -182,8 +182,9 @@ cmp.setup({
     --   })
     -- end
     format = lspkind.cmp_format({
-      with_text = true,
-      menu      = menu_items,
+      with_text  = true,
+      menu       = menu_items,
+      symbol_map = kind_icons,
     })
   },
 
@@ -205,8 +206,8 @@ cmp.setup({
 cmp.setup.cmdline(':', {
   sources = cmp.config.sources({
     { name = 'path' }
-  -- }, {
-  --   { name = 'cmdline' }
+  }, {
+    { name = 'cmdline' }
   }),
   documentation = false,
 })
