@@ -15,13 +15,7 @@ require('user.coloring')
 -- " set colorcolumn=80
 -- " set completeopt=menu,menuone,noselect
 
--- let mapleader=","          " set map leader key
-
 -- ================================================================================
-
--- " if (has("termguicolors"))
--- "   set termguicolors
--- " endif
 
 -- let g:better_whitespace_enabled = 0
 
@@ -57,7 +51,7 @@ require('user.telescope')
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua
--- luafile ~/.env/nvim/config/lsp/cmp.lua
+
 -- luafile ~/.env/nvim/config/lsp/installer.lua
 -- luafile ~/.env/nvim/config/lsp/lspconfig.lua
 -- luafile ~/.env/nvim/config/lsp/lspsaga.lua
