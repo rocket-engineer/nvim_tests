@@ -46,6 +46,7 @@ require('user.indentation')
 require('user.toggleterm')
 require('user.gitsigns')
 require('user.comment')
+require('user.notify')
 
 -- luafile ~/.env/nvim/config/lualine.lua
 -- luafile ~/.env/nvim/config/notify.lua

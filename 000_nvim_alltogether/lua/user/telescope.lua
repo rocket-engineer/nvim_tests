@@ -50,6 +50,7 @@ keymap("n", "<leader>fg", ":Telescope live_grep<CR>",    opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>",    opts)
 keymap("n", "<leader>fs", ":Telescope grep_string<CR>",  opts)
 keymap("n", "<leader>fo", ":Telescope oldfiles<CR>",     opts)
+keymap("n", "<leader>fn", ":Telescope notify<CR>",       opts)
 
 -- nnoremap <leader>gc <cmd>Telescope git_commits<cr>
 -- nnoremap <leader>gm <cmd>Telescope git_branches<cr>

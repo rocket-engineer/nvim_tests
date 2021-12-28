@@ -87,7 +87,7 @@ require('packer').startup(function(use)
   }
   -- use {'glepnir/dashboard-nvim'}
   use {'akinsho/toggleterm.nvim'}
-  -- use {'rcarriga/nvim-notify'}
+  use {'rcarriga/nvim-notify'}
 
   -- code
   use {'numToStr/Comment.nvim'}
@@ -149,7 +149,7 @@ end)
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
-local opts = { silent = true, noremap = true }
+local opts = {silent = true, noremap = true}
 
 -- shorten function name
 local keymap = vim.api.nvim_set_keymap

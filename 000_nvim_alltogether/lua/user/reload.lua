@@ -35,4 +35,5 @@ local keymap = vim.api.nvim_set_keymap
 
 -- keymap("n", "<leader>pr", ":Restart<CR>", opts)
 keymap("n", "<leader>pr", ":Reload<CR>", opts)
+-- keymap("n", "<leader>rr", ":lua require("notify")("Reloaded the configuration!", "info", {title = "NVCode"})<CR>", opts)
 
