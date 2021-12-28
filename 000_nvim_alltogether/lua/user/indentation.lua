@@ -1,18 +1,31 @@
+
+-- =================================================================================================
+-- Module Protection
+-- =================================================================================================
+
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
   return
 end
 
--- fix for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
-vim.wo.colorcolumn = "99999"
 
--- lua << EOF
+-- =================================================================================================
+-- Configuration
+-- =================================================================================================
+
 indent_blankline.setup({
+
   -- standard settings
   enabled          = true,
   use_treesitter   = true,
-  filetype_exclude = {'help', 'tagbar', 'conf', 'dashboard'},
-  buftype_exclude  = {'help', 'tagbar', 'conf', 'dashboard'}, 
+  -- buftype_exclude  = {}, 
+  filetype_exclude = {
+    'help',
+    'tagbar',
+    'conf',
+    'dashboard',
+    'packer'
+  },
 
   -- advanced settings
   -- char = '┊',
@@ -32,3 +45,7 @@ indent_blankline.setup({
   -- let g:indent_blankline_context_patterns = ["class", "function", "method", "block", "list_literal", "selector", "^if",
   -- "^table", "if_statement", "while", "for"]
 })
+
+-- fix for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
+vim.wo.colorcolumn = "99999"
+

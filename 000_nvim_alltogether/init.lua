@@ -41,16 +41,18 @@ require('user.coloring')
 -- source ~/.env/nvim/config/ultisnips.vim
 
 require('user.reload')
+require('user.treesitter')
+require('user.indentation')
+
+-- luafile ~/.env/nvim/config/indent_blankline.lua
 -- luafile ~/.env/nvim/config/comment.lua
 -- luafile ~/.env/nvim/config/gitsigns.lua
--- luafile ~/.env/nvim/config/indent_blankline.lua
 -- luafile ~/.env/nvim/config/lualine.lua
 -- luafile ~/.env/nvim/config/notify.lua
 -- luafile ~/.env/nvim/config/nvim_tree.lua
 -- luafile ~/.env/nvim/config/tabline.lua
 require('user.telescope')
 -- luafile ~/.env/nvim/config/toggleterm.lua
-require('user.treesitter')
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua

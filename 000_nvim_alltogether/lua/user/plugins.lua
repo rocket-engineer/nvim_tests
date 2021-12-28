@@ -118,7 +118,10 @@ require('packer').startup(function(use)
   -- use {'rcarriga/nvim-dap-ui'}
 
   -- misc
-  -- use {'lukas-reineke/indent-blankline.nvim'}
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    requires = {{'nvim-treesitter/nvim-treesitter', opt = true}},
+  }
   -- use {'djoshea/vim-autoread'}
   -- use 'windwp/nvim-autopairs'
   -- use {'Raimondi/delimitMate'}
