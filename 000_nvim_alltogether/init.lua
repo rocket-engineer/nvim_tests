@@ -43,6 +43,7 @@ require('user.coloring')
 require('user.reload')
 require('user.treesitter')
 require('user.indentation')
+require('user.toggleterm')
 
 -- luafile ~/.env/nvim/config/indent_blankline.lua
 -- luafile ~/.env/nvim/config/comment.lua

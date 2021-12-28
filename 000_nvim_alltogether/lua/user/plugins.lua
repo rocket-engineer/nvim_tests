@@ -86,7 +86,7 @@ require('packer').startup(function(use)
     run = 'make'
   }
   -- use {'glepnir/dashboard-nvim'}
-  -- use {'akinsho/toggleterm.nvim'}
+  use {'akinsho/toggleterm.nvim'}
   -- use {'rcarriga/nvim-notify'}
 
   -- code
