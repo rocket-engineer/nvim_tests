@@ -60,7 +60,9 @@ require('packer').startup(function(use)
   use {'wbthomason/packer.nvim'}
   use {
     'famiu/nvim-reload',
-    requires = {'nvim-lua/plenary.nvim', opt = false}
+    requires = {
+      {'nvim-lua/plenary.nvim', opt = false},
+    }
   }
 
   -- coloring
@@ -72,7 +74,9 @@ require('packer').startup(function(use)
   -- work page appearance
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    requires = {
+      {'kyazdani42/nvim-web-devicons', opt = true},
+    }
   }
   -- use {'kyazdani42/nvim-tree.lua'}
   -- use {'liuchengxu/vista.vim'}
@@ -81,11 +85,15 @@ require('packer').startup(function(use)
   -- functionality
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {'nvim-lua/plenary.nvim', opt = false}
+    requires = {
+      {'nvim-lua/plenary.nvim', opt = false},
+    }
   }
   use {
     'nvim-telescope/telescope-fzf-native.nvim',
-    requires = {'nvim-telescope/telescope.nvim', opt = false},
+    requires = {
+      {'nvim-telescope/telescope.nvim', opt = false},
+    },
     run = 'make'
   }
   -- use {'glepnir/dashboard-nvim'}
@@ -128,7 +136,7 @@ require('packer').startup(function(use)
   use {
     'rcarriga/nvim-dap-ui',
     requires = {
-      {'mfussenegger/nvim-dap',           opt = false}
+      {'mfussenegger/nvim-dap', opt = false}
     },
   }
 
@@ -137,7 +145,8 @@ require('packer').startup(function(use)
     'lukas-reineke/indent-blankline.nvim',
     requires = {{'nvim-treesitter/nvim-treesitter', opt = true}},
   }
-  -- use {'djoshea/vim-autoread'}
+  use {'djoshea/vim-autoread'}
+  use {'liuchengxu/vim-which-key'}
   -- use 'windwp/nvim-autopairs'
   -- use {'Raimondi/delimitMate'}
   -- use {'norcalli/nvim-colorizer.lua'}

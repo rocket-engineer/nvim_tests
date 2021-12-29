@@ -71,7 +71,7 @@ local opts = {silent = true, noremap = true}
 -- shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<leader>h", "<cmd>lua _HTOP_TOGGLE()<CR>",    opts)
-keymap("n", "<leader>p", "<cmd>lua _PYTHON_TOGGLE()<CR>",  opts)
-keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<CR>",    opts)
+keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>",  opts)
+keymap("n", "<leader>gl", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
