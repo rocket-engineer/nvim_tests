@@ -50,9 +50,7 @@ require('user.dap')
 require('user.lsp')
 require('user.cmp')
 
--- luafile ~/.env/nvim/config/dap/dap.lua
--- luafile ~/.env/nvim/config/dap/dapui.lua
--- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua
+require('user.which_key')
 
 -- luafile ~/.env/nvim/config/lsp/null_ls.lua
 
