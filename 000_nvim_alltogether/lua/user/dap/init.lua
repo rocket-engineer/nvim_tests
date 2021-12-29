@@ -9,6 +9,6 @@ if not status_ok then
 end
 
 require('user.dap.dap')
--- require('user.dap.dapui')
+require('user.dap.dapui')
 require('user.dap.dap_virtual_text')
 
