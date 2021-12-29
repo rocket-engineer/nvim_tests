@@ -105,6 +105,7 @@ require('packer').startup(function(use)
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-nvim-lua'}
   -- use {'quangnguyen30192/cmp-nvim-ultisnips'}
   use {'onsails/lspkind-nvim'}
 
@@ -116,9 +117,20 @@ require('packer').startup(function(use)
   -- use {'jose-elias-alvarez/null-ls.nvim'}
 
   -- DAP
-  -- use {'mfussenegger/nvim-dap'}
-  -- use {'theHamsta/nvim-dap-virtual-text'}
-  -- use {'rcarriga/nvim-dap-ui'}
+  use {'mfussenegger/nvim-dap'}
+  use {
+    'theHamsta/nvim-dap-virtual-text',
+    requires = {
+      {'mfussenegger/nvim-dap',           opt = false},
+      {'nvim-treesitter/nvim-treesitter', opt = false}
+    },
+  }
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {
+      {'mfussenegger/nvim-dap',           opt = false}
+    },
+  }
 
   -- misc
   use {

@@ -46,7 +46,7 @@ require('user.tabline')
 -- require('user.vista')
 require('user.telescope')
 
--- require('user.dap')
+require('user.dap')
 require('user.lsp')
 require('user.cmp')
 
@@ -78,20 +78,6 @@ require('user.cmp')
 -- nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
 -- nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
 -- nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
-
--- " DAP
--- nnoremap <leader>db :lua require('dap').toggle_breakpoint()<CR>
--- nnoremap <leader>dr :lua require('dap.repl').toggle()<CR>
--- nnoremap <leader>dn :lua require('dap').continue()<CR>
--- nnoremap <leader>d_ :lua require('dap').run_last()<CR>
--- nnoremap <leader>dq :lua require('dap').disconnect()<CR>
--- nnoremap <leader>d? :lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>
--- nnoremap <S-j> :lua require('dap').step_over()<CR>
--- nnoremap <S-k> :lua require('dap').step_into()<CR>
--- nnoremap <S-l> :lua require('dap').step_out()<CR>
--- nnoremap <leader>dk :lua require('dap').up()<CR>
--- nnoremap <leader>dj :lua require('dap').down()<CR>
--- nnoremap <leader>dl :lua require('dap').list_breakpoints()<CR>
 
 -- " googletest
 -- nnoremap <leader>tr <cmd>GTestRun<cr>
