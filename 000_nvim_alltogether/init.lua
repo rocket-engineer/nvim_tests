@@ -42,20 +42,18 @@ require('user.notify')
 
 require('user.lualine')
 require('user.tabline')
+-- require('user.nvim_tree')
+-- require('user.vista')
+require('user.telescope')
 
+-- require('user.dap')
 require('user.lsp')
 require('user.cmp')
 
-require('user.telescope')
-
--- luafile ~/.env/nvim/config/nvim_tree.lua
 -- luafile ~/.env/nvim/config/dap/dap.lua
 -- luafile ~/.env/nvim/config/dap/dapui.lua
 -- luafile ~/.env/nvim/config/dap/dap_virtual_text.lua
 
--- luafile ~/.env/nvim/config/lsp/installer.lua
--- luafile ~/.env/nvim/config/lsp/lspconfig.lua
--- luafile ~/.env/nvim/config/lsp/lspsaga.lua
 -- luafile ~/.env/nvim/config/lsp/null_ls.lua
 
 -- ================================================================================

@@ -25,6 +25,7 @@ telescope.setup({
 })
 
 telescope.load_extension('fzf')
+telescope.load_extension('notify')
 
 
 -- =================================================================================================
@@ -39,7 +40,7 @@ telescope.load_extension('fzf')
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
-local opts = { silent = true, noremap = true }
+local opts = {silent = true, noremap = true}
 
 -- shorten function name
 local keymap = vim.api.nvim_set_keymap
