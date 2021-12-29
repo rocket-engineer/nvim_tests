@@ -81,7 +81,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "<leader>rn", ":lua require('lspsaga.rename').rename()<CR>",                      opts)
 keymap("n", "<leader>cp", ":lua require('lspsaga.provider').preview_definition()<CR>",        opts)
 keymap("n", "<leader>cd", ":lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>",   opts)
-keymap("n", "<leader>cc", ":lua require('lspsaga.diagnostic').show_cursor_diagnostics()<CR>", opts)
+keymap("n", "<leader>ce", ":lua require('lspsaga.diagnostic').show_cursor_diagnostics()<CR>", opts)
 keymap("n", "<leader>cs", ":lua require('lspsaga.signaturehelp').signature_help()<CR>",       opts)
 keymap("n", "<leader>ca", ":lua require('lspsaga.codeaction').code_action()<CR>",             opts)
 keymap("n", "<leader>ch", ":lua require('lspsaga.provider').lsp_finder()<CR>",                opts)
