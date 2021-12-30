@@ -46,6 +46,7 @@ require('user.tabline')
 -- require('user.nvim_tree')
 -- require('user.vista')
 require('user.telescope')
+require('user.hop')
 
 require('user.dap')
 require('user.lsp')

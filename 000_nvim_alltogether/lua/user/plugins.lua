@@ -155,6 +155,7 @@ require('packer').startup(function(use)
     'jdhao/better-escape.vim',
     event = 'InsertEnter'
   }
+  use {'phaazon/hop.nvim'}
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then
