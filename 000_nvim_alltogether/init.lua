@@ -35,6 +35,8 @@ require('user.coloring')
 require('user.reload')
 require('user.treesitter')
 require('user.indentation')
+require('user.which_key')
+
 require('user.toggleterm')
 require('user.gitsigns')
 require('user.comment')
@@ -49,10 +51,6 @@ require('user.telescope')
 require('user.dap')
 require('user.lsp')
 require('user.cmp')
-
-require('user.which_key')
-
--- luafile ~/.env/nvim/config/lsp/null_ls.lua
 
 -- ================================================================================
 

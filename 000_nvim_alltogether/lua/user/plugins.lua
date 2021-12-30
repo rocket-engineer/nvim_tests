@@ -146,7 +146,7 @@ require('packer').startup(function(use)
     requires = {{'nvim-treesitter/nvim-treesitter', opt = true}},
   }
   use {'djoshea/vim-autoread'}
-  use {'liuchengxu/vim-which-key'}
+  use {'folke/which-key.nvim'}
   -- use 'windwp/nvim-autopairs'
   -- use {'Raimondi/delimitMate'}
   -- use {'norcalli/nvim-colorizer.lua'}
@@ -176,12 +176,39 @@ end)
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
-local opts = {silent = true, noremap = true}
+-- local opts = {silent = true, noremap = true}
 
 -- shorten function name
-local keymap = vim.api.nvim_set_keymap
+-- local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<leader>ps", ":PackerSync<CR>",   opts)
-keymap("n", "<leader>pl", ":PackerStatus<CR>", opts)
+-- keymap("n", "<leader>ps", ":PackerSync<CR>",   opts)
+-- keymap("n", "<leader>pl", ":PackerStatus<CR>", opts)
 -- keymap("n", "<leader>pc", ":PackerClean<CR>",  opts)
+
+local wk_ok, wk = pcall(require, "which-key")
+if not wk_ok then
+  return
+end
+
+local opts = {
+  mode    = "n",        -- NORMAL mode
+  prefix  = "<leader>",
+  buffer  = nil,        -- Global mappings. Specify a buffer number for buffer local mappings
+  silent  = true,       -- use `silent` when creating keymaps
+  noremap = true,       -- use `noremap` when creating keymaps
+  nowait  = true,       -- use `nowait` when creating keymaps
+}
+
+local mappings = {
+  p = {
+    name = "Packer",
+    c = {"<cmd>PackerCompile<cr>", "Compile" },
+    i = {"<cmd>PackerInstall<cr>", "Install" },
+    s = {"<cmd>PackerSync<cr>",    "Sync"    },
+    S = {"<cmd>PackerStatus<cr>",  "Status"  },
+    u = {"<cmd>PackerUpdate<cr>",  "Update"  },
+  }
+}
+
+wk.register(mappings, opts)
 

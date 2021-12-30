@@ -66,12 +66,36 @@ end
 -- * term_mode         -> "t",
 -- * command_mode      -> "c",
 
-local opts = {silent = true, noremap = true}
+-- local opts = {silent = true, noremap = true}
 
 -- shorten function name
-local keymap = vim.api.nvim_set_keymap
+-- local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<CR>",    opts)
-keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>",  opts)
-keymap("n", "<leader>gl", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+-- keymap("n", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<CR>",    opts)
+-- keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>",  opts)
+-- keymap("n", "<leader>gl", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+
+local wk_ok, wk = pcall(require, "which-key")
+if not wk_ok then
+  return
+end
+
+local opts = {
+  mode    = "n",        -- NORMAL mode
+  prefix  = "<leader>",
+  buffer  = nil,        -- Global mappings. Specify a buffer number for buffer local mappings
+  silent  = true,       -- use `silent` when creating keymaps
+  noremap = true,       -- use `noremap` when creating keymaps
+  nowait  = true,       -- use `nowait` when creating keymaps
+}
+
+local mappings = {
+  t = {
+    name = "Terminal",
+    h = {"<cmd>lua _HTOP_TOGGLE()<cr>",   "htop"  },
+    p = {"<cmd>lua _PYTHON_TOGGLE()<cr>", "Python"},
+  }
+}
+
+wk.register(mappings, opts)
 
