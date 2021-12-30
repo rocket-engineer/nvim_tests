@@ -105,7 +105,7 @@ require('packer').startup(function(use)
   -- use {'SirVer/ultisnips'}
   use {'lewis6991/gitsigns.nvim'}
   -- use 'tpope/vim-fugitive'
-  -- use {'alepez/vim-gtest'}
+  use {'alepez/vim-gtest'}
 
   -- code completion
   use {'hrsh7th/nvim-cmp'}

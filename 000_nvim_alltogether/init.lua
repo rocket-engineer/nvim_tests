@@ -52,6 +52,8 @@ require('user.dap')
 require('user.lsp')
 require('user.cmp')
 
+require('user.google_test')
+
 -- ================================================================================
 
 -- Colors
