@@ -49,7 +49,7 @@ end
 packer.init {
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require("packer.util").float {border = "rounded"}
     end,
   },
 }
@@ -58,15 +58,8 @@ require('packer').startup(function(use)
 
   -- packer can manage itself
   use {'wbthomason/packer.nvim'}
-  use {
-    'famiu/nvim-reload',
-    requires = {
-      {'nvim-lua/plenary.nvim', opt = false},
-    }
-  }
 
   -- coloring
-  -- use {'pacha/vem-dark'}
   use {'folke/tokyonight.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'kyazdani42/nvim-web-devicons'}
@@ -78,8 +71,13 @@ require('packer').startup(function(use)
       {'kyazdani42/nvim-web-devicons', opt = true},
     }
   }
-  use {'kyazdani42/nvim-tree.lua'}
-  -- use {'liuchengxu/vista.vim'}
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      {'kyazdani42/nvim-web-devicons', opt = false},
+    },
+  }
+  use {'liuchengxu/vista.vim'}
   use {'seblj/nvim-tabline'}
 
   -- functionality
@@ -102,55 +100,17 @@ require('packer').startup(function(use)
 
   -- code
   use {'numToStr/Comment.nvim'}
-  -- use {'SirVer/ultisnips'}
   use {'lewis6991/gitsigns.nvim'}
-  -- use 'tpope/vim-fugitive'
-  use {'alepez/vim-gtest'}
-
-  -- code completion
-  use {'hrsh7th/nvim-cmp'}
-  use {'hrsh7th/cmp-buffer'}
-  use {'hrsh7th/cmp-path'}
-  use {'hrsh7th/cmp-cmdline'}
-  use {'hrsh7th/cmp-nvim-lsp'}
-  use {'hrsh7th/cmp-nvim-lua'}
-  -- use {'quangnguyen30192/cmp-nvim-ultisnips'}
-  use {'onsails/lspkind-nvim'}
-
-  -- LSP
-  use {'neovim/nvim-lspconfig'}
-  use {'williamboman/nvim-lsp-installer'}
-  -- use 'glepnir/lspsaga.nvim'
-  use {'tami5/lspsaga.nvim'}
-  -- use {'jose-elias-alvarez/null-ls.nvim'}
-
-  -- DAP
-  use {'mfussenegger/nvim-dap'}
-  use {
-    'theHamsta/nvim-dap-virtual-text',
-    requires = {
-      {'mfussenegger/nvim-dap',           opt = false},
-      {'nvim-treesitter/nvim-treesitter', opt = false}
-    },
-  }
-  use {
-    'rcarriga/nvim-dap-ui',
-    requires = {
-      {'mfussenegger/nvim-dap', opt = false}
-    },
-  }
 
   -- misc
   use {
     'lukas-reineke/indent-blankline.nvim',
-    requires = {{'nvim-treesitter/nvim-treesitter', opt = true}},
+    requires = {
+      {'nvim-treesitter/nvim-treesitter', opt = true}
+    },
   }
   use {'djoshea/vim-autoread'}
   use {'folke/which-key.nvim'}
-  -- use 'windwp/nvim-autopairs'
-  -- use {'Raimondi/delimitMate'}
-  -- use {'norcalli/nvim-colorizer.lua'}
-  -- use {'ntpeters/vim-better-whitespace'}
   use {
     'jdhao/better-escape.vim',
     event = 'InsertEnter'
