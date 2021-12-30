@@ -13,28 +13,12 @@ end
 -- Configuration
 -- =================================================================================================
 
-hop.setup({
-})
+hop.setup()
 
 
 -- =================================================================================================
 -- Keymaps
 -- =================================================================================================
-
--- Modes
--- * normal_mode       -> "n",
--- * insert_mode       -> "i",
--- * visual_mode       -> "v",
--- * visual_block_mode -> "x",
--- * term_mode         -> "t",
--- * command_mode      -> "c",
-
--- local opts = {silent = true, noremap = true}
-
--- shorten function name
--- local keymap = vim.api.nvim_set_keymap
-
--- keymap("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
 
 local wk_ok, wk = pcall(require, "which-key")
 if not wk_ok then
