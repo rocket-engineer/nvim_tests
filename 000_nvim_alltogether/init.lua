@@ -29,7 +29,6 @@ require('user.coloring')
 
 -- source ~/.env/nvim/config/dashboard.vim
 -- source ~/.env/nvim/config/delimite_mate.vim
--- source ~/.env/nvim/config/googletest.vim
 -- source ~/.env/nvim/config/ultisnips.vim
 
 require('user.reload')
@@ -76,15 +75,6 @@ require('user.google_test')
 -- nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
 -- nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
 -- nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
-
--- " googletest
--- nnoremap <leader>tr <cmd>GTestRun<cr>
--- nnoremap <leader>tc <cmd>GTestRunUnderCursor<cr>
--- nnoremap ]t <cmd>GTestNext<cr>
--- nnoremap [t <cmd>GTestPrev<cr>
--- nnoremap <leader>du :lua require('dapui').toggle()<CR>
--- nnoremap <leader>di :lua require('dapui').eval()<CR>
--- nnoremap <leader>df :lua require('dapui').float_element()<CR>
 
 -- ================================================================================
 
