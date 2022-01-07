@@ -122,7 +122,7 @@ require('packer').startup(function(use)
   use {'williamboman/nvim-lsp-installer'}
   -- use 'glepnir/lspsaga.nvim'
   use {'tami5/lspsaga.nvim'}
-  -- use {'jose-elias-alvarez/null-ls.nvim'}
+  use {'jose-elias-alvarez/null-ls.nvim'}
 
   -- DAP
   use {'mfussenegger/nvim-dap'}
