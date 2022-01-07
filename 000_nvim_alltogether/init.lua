@@ -44,7 +44,7 @@ require('user.notify')
 require('user.lualine')
 require('user.tabline')
 require('user.nvim_tree')
--- require('user.vista')
+require('user.vista')
 require('user.telescope')
 require('user.hop')
 

@@ -79,7 +79,7 @@ require('packer').startup(function(use)
     }
   }
   use {'kyazdani42/nvim-tree.lua'}
-  -- use {'liuchengxu/vista.vim'}
+  use {'liuchengxu/vista.vim'}
   use {'seblj/nvim-tabline'}
 
   -- functionality
