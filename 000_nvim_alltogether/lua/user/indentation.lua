@@ -18,7 +18,7 @@ indent_blankline.setup({
   -- standard settings
   enabled          = true,
   use_treesitter   = true,
-  -- buftype_exclude  = {}, 
+  -- buftype_exclude  = {},
   filetype_exclude = {
     'help',
     'tagbar',
@@ -26,6 +26,7 @@ indent_blankline.setup({
     'dashboard',
     'packer',
     'lsp-installer',
+    'NvimTree',
   },
 
   -- advanced settings
