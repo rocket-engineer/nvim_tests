@@ -71,7 +71,7 @@ require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'kyazdani42/nvim-web-devicons'}
 
-  -- work page appearance
+  -- work page appearance and navigation
   use {
     'nvim-lualine/lualine.nvim',
     requires = {
@@ -81,6 +81,7 @@ require('packer').startup(function(use)
   use {'kyazdani42/nvim-tree.lua'}
   use {'liuchengxu/vista.vim'}
   use {'seblj/nvim-tabline'}
+  -- use {'rocket-engineer/nvim-navigation'}
 
   -- functionality
   use {
@@ -123,6 +124,12 @@ require('packer').startup(function(use)
   -- use 'glepnir/lspsaga.nvim'
   use {'tami5/lspsaga.nvim'}
   use {'jose-elias-alvarez/null-ls.nvim'}
+  use {
+    'folke/trouble.nvim',
+    requires = {
+      {'kyazdani42/nvim-web-devicons', opt = false}
+    }
+  }
 
   -- DAP
   use {'mfussenegger/nvim-dap'}
