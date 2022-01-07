@@ -24,7 +24,8 @@ indent_blankline.setup({
     'tagbar',
     'conf',
     'dashboard',
-    'packer'
+    'packer',
+    'lsp-installer',
   },
 
   -- advanced settings
@@ -33,7 +34,7 @@ indent_blankline.setup({
   show_first_indent_level        = false,
   show_trailing_blankline_indent = false,
   show_current_context           = true,
-  -- show_current_context_start     = true,
+  show_current_context_start     = false,
   context_patterns = {
     "function",
     "class",
