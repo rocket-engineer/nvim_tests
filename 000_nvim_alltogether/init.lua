@@ -35,24 +35,26 @@ require('user.reload')
 require('user.treesitter')
 require('user.indentation')
 require('user.which_key')
+-- require('user.sessions')
 
 require('user.toggleterm')
 require('user.gitsigns')
 require('user.comment')
-require('user.notify')
+-- require('user.notify')
 
+-- require('user.alpha')
 require('user.lualine')
 require('user.tabline')
-require('user.nvim_tree')
-require('user.vista')
+-- require('user.nvim_tree')
+-- require('user.vista')
 require('user.telescope')
 require('user.hop')
 
-require('user.dap')
-require('user.lsp')
-require('user.cmp')
+-- require('user.dap')
+-- require('user.lsp')
+-- require('user.cmp')
 
-require('user.google_test')
+-- require('user.google_test')
 
 -- ================================================================================
 
