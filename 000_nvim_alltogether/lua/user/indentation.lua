@@ -49,5 +49,5 @@ indent_blankline.setup({
 })
 
 -- fix for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
-vim.wo.colorcolumn = "99999"
+-- vim.wo.colorcolumn = "99999"
 
