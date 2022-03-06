@@ -14,30 +14,30 @@ end
 -- =================================================================================================
 
 local kind_icons = {
-  Text = "",
-  Method = "",
-  Function = "",
-  Constructor = "",
-  Field = "ﰠ",
-  Variable = "",
-  Class = "ﴯ",
-  Interface = "",
-  Module = "",
-  Property = "ﰠ",
-  Unit = "塞",
-  Value = "",
-  Enum = "",
-  Keyword = "",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "פּ",
-  Event = "",
-  Operator = "",
+  Text          = "",
+  Method        = "",
+  Function      = "",
+  Constructor   = "",
+  Field         = "ﰠ",
+  Variable      = "",
+  Class         = "ﴯ",
+  Interface     = "",
+  Module        = "",
+  Property      = "ﰠ",
+  Unit          = "塞",
+  Value         = "",
+  Enum          = "",
+  Keyword       = "",
+  Snippet       = "",
+  Color         = "",
+  File          = "",
+  Reference     = "",
+  Folder        = "",
+  EnumMember    = "",
+  Constant      = "",
+  Struct        = "פּ",
+  Event         = "",
+  Operator      = "",
   TypeParameter = ""
 }
 
@@ -75,8 +75,9 @@ local lspkind = require('lspkind')
 
 cmp.setup({
 
+  -- the order of the sources matters
   sources = {
-    {name = 'nvim_lsp'},
+    -- {name = 'nvim_lsp'},
     -- {name = "ultisnips"},
     {name = 'buffer'},
     {name = 'path'},
@@ -182,7 +183,7 @@ cmp.setup({
     --   })
     -- end
     format = lspkind.cmp_format({
-      with_text  = true,
+      mode       = 'symbol_test',
       menu       = menu_items,
       symbol_map = kind_icons,
     })
