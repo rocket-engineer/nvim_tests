@@ -77,7 +77,7 @@ cmp.setup({
 
   -- the order of the sources matters
   sources = {
-    -- {name = 'nvim_lsp'},
+    {name = 'nvim_lsp'},
     -- {name = "ultisnips"},
     {name = 'buffer'},
     {name = 'path'},
