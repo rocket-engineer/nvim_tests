@@ -24,10 +24,14 @@
 vim.cmd [[let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "~/.env/nvim/misc/snippets"]]
 vim.cmd [[let g:UltiSnipsEnableSnipMate      = 0         ]]
 vim.cmd [[let g:UltiSnipsEditSplit           = "vertical"]]
-vim.cmd [[let g:UltiSnipsExpandTrigger       = "<c-k>"   ]]
-vim.cmd [[let g:UltiSnipsJumpForwardTrigger  = "<tab>"   ]]
-vim.cmd [[let g:UltiSnipsJumpBackwardTrigger = "<s-tab>" ]]
-vim.cmd [[let g:UltiSnipsListSnippets        = "<c-l>"   ]]
+-- vim.cmd [[let g:UltiSnipsExpandTrigger       = "<c-k>"   ]]
+-- vim.cmd [[let g:UltiSnipsJumpForwardTrigger  = "<tab>"   ]]
+-- vim.cmd [[let g:UltiSnipsJumpBackwardTrigger = "<s-tab>" ]]
+-- vim.cmd [[let g:UltiSnipsListSnippets        = "<c-l>"   ]]
+vim.cmd [[let g:UltiSnipsExpandTrigger       = "<c-1>"]]
+vim.cmd [[let g:UltiSnipsJumpForwardTrigger  = "<c-1>"]]
+vim.cmd [[let g:UltiSnipsJumpBackwardTrigger = "<c-1>"]]
+vim.cmd [[let g:UltiSnipsListSnippets        = "<c-1>"]]
 
 -- let g:UltiSnipsEditSplit           = "context"
 -- let g:UltiSnipsExpandTrigger       = "<c-k>"

@@ -127,14 +127,14 @@ require('packer').startup(function(use)
   -- use {'alepez/vim-gtest'}
 
   -- code completion
-  -- use {'hrsh7th/nvim-cmp'}
-  -- use {'hrsh7th/cmp-buffer'}
-  -- use {'hrsh7th/cmp-path'}
-  -- use {'hrsh7th/cmp-cmdline'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-cmdline'}
   -- use {'hrsh7th/cmp-nvim-lsp'}
   -- use {'hrsh7th/cmp-nvim-lua'}
-  -- use {'quangnguyen30192/cmp-nvim-ultisnips'}
-  -- use {'onsails/lspkind-nvim'}
+  use {'quangnguyen30192/cmp-nvim-ultisnips'}
+  use {'onsails/lspkind-nvim'}
 
   -- LSP
   -- use {'neovim/nvim-lspconfig'}

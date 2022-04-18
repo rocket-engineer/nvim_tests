@@ -10,5 +10,5 @@ require('user.which_key')
 
 require('user.ultisnips')
 
--- require('user.cmp')
+require('user.cmp')
 
