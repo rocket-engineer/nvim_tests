@@ -103,7 +103,7 @@ require('packer').startup(function(use)
   use {'rcarriga/nvim-notify'}
 
   -- code
-  use {'numToStr/Comment.nvim'}
+  -- use {'numToStr/Comment.nvim'}
   -- use {'SirVer/ultisnips'}
   use {'lewis6991/gitsigns.nvim'}
   -- use 'tpope/vim-fugitive'
@@ -118,6 +118,7 @@ require('packer').startup(function(use)
   use {'hrsh7th/cmp-nvim-lua'}
   -- use {'quangnguyen30192/cmp-nvim-ultisnips'}
   use {'onsails/lspkind-nvim'}
+  -- use {'cmp-nvim-lsp-signature-help'}
 
   -- LSP
   use {'neovim/nvim-lspconfig'}

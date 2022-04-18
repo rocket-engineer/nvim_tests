@@ -83,9 +83,9 @@ cmp.setup({
     {name = 'path'},
   },
 
-  -- TODO: do not show documentation in command line
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  window = {
+    -- completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
 
   -- snippet = {
@@ -183,7 +183,7 @@ cmp.setup({
     --   })
     -- end
     format = lspkind.cmp_format({
-      mode       = 'symbol_test',
+      mode       = 'symbol_text',
       menu       = menu_items,
       symbol_map = kind_icons,
     })
@@ -210,7 +210,12 @@ cmp.setup.cmdline(':', {
   }, {
     { name = 'cmdline' }
   }),
-  documentation = false,
+
+  window = {
+    documentation = false,
+  },
+
+  mapping = cmp.mapping.preset.cmdline(),
 })
 
 -- Add additional capabilities supported by nvim-cmp

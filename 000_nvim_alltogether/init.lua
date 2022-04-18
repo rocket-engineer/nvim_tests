@@ -39,7 +39,7 @@ require('user.which_key')
 
 require('user.toggleterm')
 require('user.gitsigns')
-require('user.comment')
+-- require('user.comment')
 -- require('user.notify')
 
 -- require('user.alpha')
