@@ -2,12 +2,14 @@
  Next Activities:
 
  - Make current version work
+ - Plugin: UltiSnips & Integration -> Switch to LuaSnip
  - Plugin: Sessions
  - Plugin: LSP Signature
- - Plugin: UltiSnips & Integration
  - Java & LSP
  - GoogleTest
  - DAP: Test.2017, Test.2020 and Generator
+ - Keymap: Strg+b to jump behind current brackets (DelimiterMate ?)
+ - Spell check in comments (only in comments for same languages)
 
  Found Issues:
 
