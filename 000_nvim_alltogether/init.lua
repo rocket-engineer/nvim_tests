@@ -29,7 +29,6 @@ require('user.coloring')
 
 -- source ~/.env/nvim/config/dashboard.vim
 -- source ~/.env/nvim/config/delimite_mate.vim
--- source ~/.env/nvim/config/ultisnips.vim
 
 require('user.reload')
 require('user.treesitter')
@@ -49,6 +48,8 @@ require('user.tabline')
 -- require('user.vista')
 require('user.telescope')
 require('user.hop')
+
+require('user.luasnip')
 
 -- require('user.dap')
 require('user.lsp')
