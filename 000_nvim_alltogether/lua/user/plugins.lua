@@ -103,7 +103,7 @@ require('packer').startup(function(use)
   use {'rcarriga/nvim-notify'}
 
   -- code
-  -- use {'numToStr/Comment.nvim'}
+  use {'numToStr/Comment.nvim'}
   use {'L3MON4D3/LuaSnip'}
   use {'lewis6991/gitsigns.nvim'}
   -- use 'tpope/vim-fugitive'
