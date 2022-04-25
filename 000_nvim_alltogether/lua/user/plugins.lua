@@ -98,6 +98,13 @@ require('packer').startup(function(use)
     },
     run = 'make'
   }
+  use {
+    "benfowler/telescope-luasnip.nvim",
+    -- module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
+    requires = {
+      {'nvim-telescope/telescope.nvim', opt = false},
+    },
+  }
   -- use {'glepnir/dashboard-nvim'}
   use {'akinsho/toggleterm.nvim'}
   use {'rcarriga/nvim-notify'}

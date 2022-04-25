@@ -25,6 +25,7 @@ telescope.setup({
 })
 
 telescope.load_extension('fzf')
+telescope.load_extension('luasnip')
 -- telescope.load_extension('notify')
 
 
@@ -83,7 +84,8 @@ local mappings = {
     m = {"<cmd>Telescope man_pages<cr>",    "Man Pages"         },
     n = {"<cmd>Telescope notify<cr>",       "Noficiations"      },
     o = {"<cmd>Telescope oldfiles<cr>",     "Open Recent Files" },
-    s = {"<cmd>Telescope grep_string<cr>",  "Grep String"       },
+    -- s = {"<cmd>Telescope grep_string<cr>",  "Grep String"       },
+    s = {"<cmd>Telescope luasnip<cr>",      "Show Snippet"      },
     C = {"<cmd>Telescope colorscheme<cr>",  "Choose Colorscheme"},
   }
 }
