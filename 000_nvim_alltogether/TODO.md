@@ -8,9 +8,9 @@ Next Activities
   + Make current version work -> NvimTree, no autocommands?
   + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
   + Plugin: Vim-Better-Whitespace or NeoVim alternative
+  + Plugin: LSP Signature (ray-x/lsp_signature) or hrsh7th/cmp-nvim-lsp-signature-help
 
   - Plugin: Sessions
-  - Plugin: LSP Signature (ray-x/lsp_signature) or hrsh7th/cmp-nvim-lsp-signature-help
   - Better TACO integration (is there anythin missing - generated code?)
  
   - Java & LSP
