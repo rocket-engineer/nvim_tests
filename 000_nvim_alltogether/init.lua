@@ -54,6 +54,8 @@ require('user.luasnip')
 require('user.lsp')
 require('user.cmp')
 
+require('user.autopairs')
+require('user.tabout')
 -- require('user.google_test')
 
 -- ================================================================================

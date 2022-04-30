@@ -69,6 +69,7 @@ require('packer').startup(function(use)
   -- use {'pacha/vem-dark'}
   use {'folke/tokyonight.nvim'}
   use {'EdenEast/nightfox.nvim'}
+  -- use {'ellisonleao/gruvbox.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'kyazdani42/nvim-web-devicons'}
 
@@ -157,21 +158,29 @@ require('packer').startup(function(use)
   }
 
   -- misc
-  use {
-    'lukas-reineke/indent-blankline.nvim',
-    requires = {{'nvim-treesitter/nvim-treesitter', opt = true}},
-  }
   use {'djoshea/vim-autoread'}
   use {'folke/which-key.nvim'}
-  -- use 'windwp/nvim-autopairs'
-  -- use {'Raimondi/delimitMate'}
+  use {'phaazon/hop.nvim'}
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    requires = {{'nvim-treesitter/nvim-treesitter', opt = false}},
+  }
+  use {
+    'windwp/nvim-autopairs',
+    requires = {'nvim-treesitter/nvim-treesitter', opt = false}
+  }
+  use {
+    'abecodes/tabout.nvim',
+    requires = {'nvim-treesitter/nvim-treesitter', opt = false}
+    -- wants = {'nvim-treesitter'},
+    -- after = {'nvim-cmp'},
+  }
   -- use {'norcalli/nvim-colorizer.lua'}
   -- use {'ntpeters/vim-better-whitespace'}
   use {
     'jdhao/better-escape.vim',
     event = 'InsertEnter'
   }
-  use {'phaazon/hop.nvim'}
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then
