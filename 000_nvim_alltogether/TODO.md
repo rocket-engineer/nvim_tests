@@ -4,9 +4,10 @@ Next Activities
 
   ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
   ✔ Install rigrep -> using deb file
+  ✔ Plugin: Autoparis & Tabclose - Integration
   + Make current version work -> NvimTree, no autocommands?
   + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
-  + Plugin: Autoparis & Tabclose - Integration
+  + Plugin: Vim-Better-Whitespace or NeoVim alternative
 
   - Plugin: Sessions
   - Plugin: LSP Signature (ray-x/lsp_signature) or hrsh7th/cmp-nvim-lsp-signature-help
