@@ -163,6 +163,12 @@ require('packer').startup(function(use)
   use {'folke/which-key.nvim'}
   use {'phaazon/hop.nvim'}
   use {
+    'Shatur/neovim-session-manager',
+    requires = {
+      {'nvim-lua/plenary.nvim', opt = false},
+    }
+  }
+  use {
     'lukas-reineke/indent-blankline.nvim',
     requires = {{'nvim-treesitter/nvim-treesitter', opt = false}},
   }

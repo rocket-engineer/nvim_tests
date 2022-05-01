@@ -5,13 +5,13 @@ Next Activities
   ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
   ✔ Install rigrep -> using deb file
   ✔ Plugin: Autoparis & Tabclose - Integration
+  ✔ Plugin: LSP Signature (ray-x/lsp_signature)
+  ✔ Plugin: Sessions
   + Make current version work -> NvimTree, no autocommands?
   + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
   + Plugin: Vim-Better-Whitespace or NeoVim alternative
-  + Plugin: LSP Signature (ray-x/lsp_signature) or hrsh7th/cmp-nvim-lsp-signature-help
 
-  - Plugin: Sessions
-  - Better TACO integration (is there anythin missing - generated code?)
+  - Better TACO integration (is there anything missing - generated code?)
  
   - Java & LSP
   - GoogleTest

@@ -56,6 +56,7 @@ require('user.cmp')
 
 require('user.autopairs')
 require('user.tabout')
+require('user.session_manager')
 -- require('user.google_test')
 
 -- ================================================================================
