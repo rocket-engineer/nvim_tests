@@ -140,6 +140,7 @@ require('packer').startup(function(use)
       {'kyazdani42/nvim-web-devicons', opt = false}
     }
   }
+  use {'ray-x/lsp_signature.nvim'}
 
   -- DAP
   use {'mfussenegger/nvim-dap'}
