@@ -2,24 +2,23 @@
 Next Activities
 ===============
 
-  ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
-  ✔ Install rigrep -> using deb file
-  ✔ Plugin: Autoparis & Tabclose - Integration
-  ✔ Plugin: LSP Signature (ray-x/lsp_signature)
-  ✔ Plugin: Sessions
-  + Make current version work -> NvimTree, no autocommands?
-  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
-  + Plugin: Vim-Better-Whitespace or NeoVim alternative
+ ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
+ ✔ Install rigrep -> using deb file
+ ✔ Plugin: Autoparis & Tabclose - Integration
+ ✔ Plugin: LSP Signature (ray-x/lsp_signature)
+ + Make current version work -> NvimTree, no autocommands?
 
-  - Better TACO integration (is there anything missing - generated code?)
+ + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
+ + Plugin: Vim-Better-Whitespace or NeoVim alternative
+
+ - Plugin: Sessions - Make it work (including NVimTree)
+ - Better TACO integration (is there anything missing - generated code?)
+ - Java & LSP (jdtls)
  
-  - Java & LSP
-  - GoogleTest
-  - DAP: Test.2017, Test.2020 and Generator
-  - Keymap: Strg+b to jump behind current brackets (DelimiterMate ?)
-  - Spell check in comments (only in comments for same languages)
-  - Detect whitespace
-  - Unicode characters insertion
+ - GoogleTest
+ - DAP: Test.2017, Test.2020 and Generator
+ - Spell check in comments (only in comments for same languages)
+ - Unicode characters insertion
 
 
 
