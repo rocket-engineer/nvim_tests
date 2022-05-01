@@ -24,16 +24,14 @@ require('user.coloring')
 -- ==============
 
 -- "lua require('colorizer').setup()
--- "lua require('nvim-autopairs').setup{}
 
 -- source ~/.env/nvim/config/dashboard.vim
--- source ~/.env/nvim/config/delimite_mate.vim
 
 require('user.reload')
 require('user.treesitter')
 require('user.indentation')
 require('user.which_key')
--- require('user.sessions')
+-- require('user.session_manager')
 
 require('user.toggleterm')
 require('user.gitsigns')
@@ -43,7 +41,7 @@ require('user.comment')
 -- require('user.alpha')
 require('user.lualine')
 require('user.tabline')
--- require('user.nvim_tree')
+require('user.nvim_tree')
 -- require('user.vista')
 require('user.telescope')
 require('user.hop')
@@ -56,7 +54,6 @@ require('user.cmp')
 
 require('user.autopairs')
 require('user.tabout')
-require('user.session_manager')
 -- require('user.google_test')
 
 -- ================================================================================

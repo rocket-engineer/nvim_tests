@@ -36,3 +36,33 @@ sessions.setup({
   max_path_length = 80,
 })
 
+
+-- =================================================================================================
+-- Keymaps
+-- =================================================================================================
+
+local wk_ok, wk = pcall(require, "which-key")
+if not wk_ok then
+  return
+end
+
+local opts = {
+  mode    = "n",        -- NORMAL mode
+  prefix  = "<leader>",
+  buffer  = nil,        -- Global mappings. Specify a buffer number for buffer local mappings
+  silent  = true,       -- use `silent` when creating keymaps
+  noremap = true,       -- use `noremap` when creating keymaps
+  nowait  = true,       -- use `nowait` when creating keymaps
+}
+
+local mappings = {
+  s = {
+    name = "Sessions",
+    s = {"<cmd>SessionManager save_current_session<cr>", "Save current session"},
+    d = {"<cmd>SessionManager delete_session<cr>",       "Delete session"      },
+    l = {"<cmd>SessionManager load_session<cr>",         "Load a session"      },
+  }
+}
+
+wk.register(mappings, opts)
+

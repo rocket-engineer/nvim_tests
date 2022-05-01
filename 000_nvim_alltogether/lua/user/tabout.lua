@@ -3,18 +3,17 @@
 -- Module Protection
 -- =================================================================================================
 
--- local status_ok, tabout = pcall(require, "tabout")
--- if not status_ok then
---   return
--- end
+local status_ok, tabout = pcall(require, "tabout")
+if not status_ok then
+  return
+end
 
 
 -- =================================================================================================
 -- Configuration
 -- =================================================================================================
 
--- tabout.setup {
-require('tabout').setup {
+tabout.setup {
   enable_backwards = false, -- well ...
   act_as_tab       = false, -- shift content if tab out is not possible
   act_as_shift_tab = false, -- reverse shift content if tab out is not possible
