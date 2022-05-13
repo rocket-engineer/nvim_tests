@@ -9,18 +9,16 @@ Next Activities
   + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
   + Plugin: Vim-Better-Whitespace or NeoVim alternative
   + Plugin: LSP Signature (ray-x/lsp_signature) or hrsh7th/cmp-nvim-lsp-signature-help
+  + Better TACO integration (is there anythin missing - generated code?)
 
-  - Plugin: Sessions
-  - Better TACO integration (is there anythin missing - generated code?)
- 
   - Java & LSP
-  - GoogleTest
-  - DAP: Test.2017, Test.2020 and Generator
-  - Keymap: Strg+b to jump behind current brackets (DelimiterMate ?)
+  - Plugin: Sessions
+  - GoogleTest integration
+  - DAP: DAPInstall & Test.2017, Test.2020 and Generator
+ 
   - Spell check in comments (only in comments for same languages)
   - Detect whitespace
   - Unicode characters insertion
-
 
 
 Found Issues
@@ -41,6 +39,7 @@ Ideas for Plugins
  - Define test binary
  - Run test under cursor in floating window
  - Run test under cursor in tabline
+ - Run all tests 
  - Deliver test binary / test name (complete call) for e.g. DAP
 
  Plugin: Navigation
@@ -50,6 +49,7 @@ Ideas for Plugins
  - Switch between main windows
  - Go to tab using CTRL-1 - CTRL-0 (tab #1 - #10)
  - Move tab to the left / right
+ - Show floating window with open tabs and buffers
 
  Plugin: Projects
 
