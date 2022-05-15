@@ -11,6 +11,7 @@ local options = {
   showmode     = true,                    -- we don't need to see things like -- INSERT -- anymore
   splitbelow   = true,                     -- force all horizontal splits to go below current window
   splitright   = true,                     -- force all vertical splits to go to the right of current window
+  laststatus   = 3,                        -- enable global status line
 
   -- indentation settings
   tabstop    = 2,                          -- insert 2 spaces for a tab
