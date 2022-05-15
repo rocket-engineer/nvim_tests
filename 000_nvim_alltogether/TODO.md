@@ -2,23 +2,23 @@
 Next Activities
 ===============
 
-  ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
-  ✔ Install rigrep -> using deb file
-  ✔ Plugin: Autoparis & Tabclose - Integration
-  + Make current version work -> NvimTree, no autocommands?
-  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
-  + Plugin: Vim-Better-Whitespace or NeoVim alternative
-  + Plugin: LSP Signature (ray-x/lsp_signature) or hrsh7th/cmp-nvim-lsp-signature-help
-  + Better TACO integration (is there anythin missing - generated code?)
+ ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
+ ✔ Make current version work
+ ✔ Install rigrep -> using deb file
+ ✔ Plugin: Autoparis & Tabclose - Integration
+ ✔ Plugin: LSP Signature (ray-x/lsp_signature)
+ + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
+ + Plugin: Vim-Better-Whitespace or NeoVim alternative
+ + Better TACO integration (is there anything missing - generated code?)
 
-  - Java & LSP
-  - Plugin: Sessions
-  - GoogleTest integration
-  - DAP: DAPInstall & Test.2017, Test.2020 and Generator
+ - Java & LSP (jdtls)
+ - Plugin: Sessions - Make it work (including NVimTree)
+ - GoogleTest integration
+ - DAP: DAPInstall & Test.2017, Test.2020 and Generator
  
-  - Spell check in comments (only in comments for same languages)
-  - Detect whitespace
-  - Unicode characters insertion
+ - Spell check in comments (only in comments for same languages)
+ - Detect whitespace
+ - Unicode characters insertion
 
 
 Found Issues
@@ -50,6 +50,7 @@ Ideas for Plugins
  - Go to tab using CTRL-1 - CTRL-0 (tab #1 - #10)
  - Move tab to the left / right
  - Show floating window with open tabs and buffers
+ - NvimTree: autocommands for close
 
  Plugin: Projects
 

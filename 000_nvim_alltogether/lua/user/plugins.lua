@@ -140,6 +140,7 @@ require('packer').startup(function(use)
       {'kyazdani42/nvim-web-devicons', opt = false}
     }
   }
+  use {'ray-x/lsp_signature.nvim'}
 
   -- DAP
   use {'mfussenegger/nvim-dap'}
@@ -161,6 +162,12 @@ require('packer').startup(function(use)
   use {'djoshea/vim-autoread'}
   use {'folke/which-key.nvim'}
   use {'phaazon/hop.nvim'}
+  use {
+    'Shatur/neovim-session-manager',
+    requires = {
+      {'nvim-lua/plenary.nvim', opt = false},
+    }
+  }
   use {
     'lukas-reineke/indent-blankline.nvim',
     requires = {{'nvim-treesitter/nvim-treesitter', opt = false}},

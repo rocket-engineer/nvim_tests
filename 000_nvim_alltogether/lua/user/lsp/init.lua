@@ -11,5 +11,6 @@ end
 require('user.lsp.installer')
 require('user.lsp.handlers').setup()
 require('user.lsp.lspsaga')
+require('user.lsp.lsp_signature')
 require('user.lsp.null-ls')
 
