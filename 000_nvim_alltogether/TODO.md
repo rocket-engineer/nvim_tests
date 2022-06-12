@@ -5,7 +5,7 @@ Next Activities
  ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
  ✔ Make current version work
  ✔ Install rigrep -> using deb file
- ✔ Plugin: Autoparis & Tabclose - Integration
+ ✔ Plugin: Autopairs & Tabclose - Integration
  ✔ Plugin: LSP Signature (ray-x/lsp_signature)
  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
  + Plugin: Vim-Better-Whitespace or NeoVim alternative
