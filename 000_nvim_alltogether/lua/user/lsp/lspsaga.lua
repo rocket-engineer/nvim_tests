@@ -17,7 +17,8 @@ lspsaga.setup({
 
   -- defaults ...
   debug = false,
-  use_saga_diagnostic_sign = true,
+  use_saga_diagnostic_sign    = true,
+  use_diagnostic_virtual_text = false,
 
   -- diagnostic sign
   error_sign = "",
@@ -25,14 +26,14 @@ lspsaga.setup({
   hint_sign  = "",
   infor_sign = "",
   diagnostic_header_icon = "   ",
-  
+
   -- code action title icon
   code_action_icon   = " ",
   code_action_prompt = {
     enable        = true,
     sign          = true,
     sign_priority = 40,
-    virtual_text  = true,
+    virtual_text  = false,
   },
   finder_definition_icon = "  ",
   finder_reference_icon  = "  ",
@@ -112,8 +113,8 @@ local mappings = {
     p = {"<cmd>lua require('lspsaga.provider').preview_definition()<cr>",        "Show Preview"     },
     r = {"<cmd>lua require('lspsaga.rename').rename()<cr>",                      "Rename Symbol"    },
     s = {"<cmd>lua require('lspsaga.signaturehelp').signature_help()<cr>",       "Show Signature"   },
-    d = {"<cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<cr>",   "Show Line Diag."  },
-    D = {"<cmd>lua require('lspsaga.diagnostic').show_cursor_diagnostics()<cr>", "Show Cursor Diag."},
+    l = {"<cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<cr>",   "Show Line Diag."  },
+    L = {"<cmd>lua require('lspsaga.diagnostic').show_cursor_diagnostics()<cr>", "Show Cursor Diag."},
     -- f = {"<cmd>lua vim.lsp.buf.formatting_sync()<cr>",                           "Format File"      },
     -- l = {"<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     -- s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
