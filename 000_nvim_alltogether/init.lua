@@ -43,6 +43,7 @@ require('user.lualine')
 require('user.tabline')
 require('user.nvim_tree')
 -- require('user.vista')
+require('user.scrollbar')
 require('user.telescope')
 require('user.hop')
 

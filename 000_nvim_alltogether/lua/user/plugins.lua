@@ -84,6 +84,7 @@ require('packer').startup(function(use)
   use {'liuchengxu/vista.vim'}
   use {'seblj/nvim-tabline'}
   -- use {'rocket-engineer/nvim-navigation'}
+  use {"petertriho/nvim-scrollbar"}
 
   -- functionality
   use {
