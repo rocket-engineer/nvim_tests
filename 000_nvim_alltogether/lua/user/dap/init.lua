@@ -5,7 +5,7 @@
 
 local status_ok, _ = pcall(require, "dap")
 if not status_ok then
-	return
+  return
 end
 
 require('user.dap.dap')

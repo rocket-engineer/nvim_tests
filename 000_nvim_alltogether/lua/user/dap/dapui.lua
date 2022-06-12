@@ -20,7 +20,7 @@ dapui.setup({
   },
   mappings = {
     -- Use a table to apply multiple mappings
-    expand = {"<CR>", "<2-LeftMouse>"},
+    expand = { "<CR>", "<2-LeftMouse>" },
     open   = "o",
     remove = "d",
     edit   = "e",
@@ -35,23 +35,23 @@ dapui.setup({
       {id = "stacks",      size = 0.25},
       {id = "watches",     size = 0.25},
     },
-    size = 40,
-    position = "left", -- Can be "left", "right", "top", "bottom"
+    position = "right",
+    size     = 40,
   },
   tray = {
-    elements = {"repl"},
-    size = 10,
-    position = "bottom", -- Can be "left", "right", "top", "bottom"
+    elements = { "repl" },
+    position = "bottom",
+    size     = 10,
   },
   floating = {
     max_height = nil, -- These can be integers or a float between 0 and 1.
     max_width  = nil, -- Floats will be treated as percentage of your screen.
     border = "rounded", -- Border style. Can be "single", "double" or "rounded"
     mappings = {
-      close = {"q", "<Esc>"},
+      close = { "q", "<Esc>" },
     },
   },
-  windows = {indent = 1},
+  windows = { indent = 1 },
 })
 
 
@@ -76,11 +76,14 @@ local wk_opts = {
 local mappings = {
   d = {
     name = "DAP",
-    u = {"<cmd>lua require('dapui').toggle()<cr>",        "UI: Toggle"       },
-    i = {"<cmd>lua require('dapui').eval()<cr>",          "UI: Evaluate"     },
-    f = {"<cmd>lua require('dapui').float_element()<cr>", "UI: Float Element"},
+    u = {"<cmd>lua require('dapui').toggle()<cr>",        "Toggle User Interface"   },
+    i = {"<cmd>lua require('dapui').eval()<cr>",          "Show variable value"     },
+    f = {"<cmd>lua require('dapui').float_element()<cr>", "Show variable informaion"},
   }
 }
 
 wk.register(mappings, wk_opts)
+
+-- "nnoremap <leader>d? :lua local widgets=require('dapui.widgets');require('dapui').float_element(widgets.scopes, { enter = true})<CR>
+-- "nnoremap <leader>d? :lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>
 

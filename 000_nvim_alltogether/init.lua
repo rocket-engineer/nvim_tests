@@ -31,7 +31,7 @@ require('user.reload')
 require('user.treesitter')
 require('user.indentation')
 require('user.which_key')
--- require('user.session_manager')
+-- require('user.sessions')
 
 require('user.toggleterm')
 require('user.gitsigns')
@@ -48,7 +48,7 @@ require('user.hop')
 
 require('user.luasnip')
 
--- require('user.dap')
+require('user.dap')
 require('user.lsp')
 require('user.cmp')
 
