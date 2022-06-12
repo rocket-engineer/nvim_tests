@@ -88,6 +88,67 @@ luasnip.add_snippets("cpp", {
     -- Simple static text.
     t("// MyCommentInCpp"),
   }),
+  -- include system header
+  s({
+    trig = "Inc",
+    namr = "include_system_header",
+    dscr = "Include system header"
+  },
+  {
+    -- Simple static text.
+    t("#include <"),
+    -- Placeholder with initial text.
+    i(1, "local_header"),
+    t(">"),
+    -- Last Placeholder, exit Point of the snippet.
+    i(0),
+  }),
+  -- include local header
+  s({
+    trig = "inc",
+    namr = "include_local_header",
+    dscr = "Include local header"
+  },
+  {
+    t("#include \""),
+    -- Placeholder with initial text.
+    i(1, "local_header"),
+    t("\""),
+    -- Last Placeholder, exit Point of the snippet.
+    i(0),
+  }),
+  -- cout
+  s({
+    trig = "cout",
+    namr = "cout_statement",
+    dscr = "A std::cout call with a newline"
+  },
+  {
+    -- Start of std::cout
+    t("std::cout << "),
+    -- Placeholder
+    i(1),
+    -- End of std::cout
+    t(" << std::endl;"),
+    -- Last Placeholder, exit Point of the snippet.
+    i(0),
+  }),
+  -- cout with text
+  s({
+    trig = "coutt",
+    namr = "cout_text_statement",
+    dscr = "A std::cout call with text and a newline"
+  },
+  {
+    -- Start of std::cout
+    t("std::cout << "),
+    -- Placeholder with initial text.
+    i(1, "\"My text\""),
+    -- End of std::cout
+    t(" << std::endl;"),
+    -- Last Placeholder, exit Point of the snippet.
+    i(0),
+  }),
 })
 
 -- luasnip.loaders_from_lua.load('mysnippets')
