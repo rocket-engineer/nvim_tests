@@ -22,12 +22,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
+-- vim.cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]])
 
 
 -- =================================================================================================
@@ -123,10 +123,10 @@ require('packer').startup(function(use)
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-nvim-lsp-signature-help'}
   use {'hrsh7th/cmp-nvim-lua'}
   use { 'saadparwaiz1/cmp_luasnip' }
   use {'onsails/lspkind-nvim'}
-  -- use {'cmp-nvim-lsp-signature-help'}
 
   -- LSP
   use {'neovim/nvim-lspconfig'}
@@ -162,12 +162,6 @@ require('packer').startup(function(use)
   use {'djoshea/vim-autoread'}
   use {'folke/which-key.nvim'}
   use {'phaazon/hop.nvim'}
-  use {
-    'Shatur/neovim-session-manager',
-    requires = {
-      {'nvim-lua/plenary.nvim', opt = false},
-    }
-  }
   use {
     'lukas-reineke/indent-blankline.nvim',
     requires = {{'nvim-treesitter/nvim-treesitter', opt = false}},
