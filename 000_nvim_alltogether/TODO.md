@@ -11,6 +11,7 @@ Next Activities
  + Plugin: Vim-Better-Whitespace or NeoVim alternative
  + Better TACO integration (is there anything missing - generated code?)
  + Java & LSP (jdtls)
+ + Different language settings (indentation, spell check, etc using after)
 
  + DAP Integration
    * Adapters for C++ and Java
@@ -20,7 +21,7 @@ Next Activities
    * nvim-dap-ui
    * telescope-dap
    * cmp-dap ?
- + Scrollbar - petertriho/nvim-scrollbar
+ + Plugin: Scrollbar - Better color, do not show fixed errors
 
  - GoogleTest integration
  - Plugin: Sessions - Make it work (including NVimTree) - jedrzejboczar/possession.nvim ?
