@@ -10,13 +10,24 @@ Next Activities
  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
  + Plugin: Vim-Better-Whitespace or NeoVim alternative
  + Better TACO integration (is there anything missing - generated code?)
+ + Java & LSP (jdtls)
 
- - Java & LSP (jdtls)
- - Plugin: Sessions - Make it work (including NVimTree)
+ + DAP Integration
+   * Adapters for C++ and Java
+   * Configurations for Test.2017, Test.2020 and Generator
+   * DAPInstall integration
+   * nvim-dap-virtual-text
+   * nvim-dap-ui
+   * telescope-dap
+   * cmp-dap ?
+ + Scrollbar - petertriho/nvim-scrollbar
+
  - GoogleTest integration
- - DAP: DAPInstall & Test.2017, Test.2020 and Generator
+ - Plugin: Sessions - Make it work (including NVimTree) - jedrzejboczar/possession.nvim ?
+ - Plugin: Gitdiff integration - sindrets/diffview.nvim ?
+ - Customized tabline: rafcamlet/tabline-framework.nvim
  
- - Spell check in comments (only in comments for same languages)
+ - Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
  - Detect whitespace
  - Unicode characters insertion
 
@@ -51,6 +62,7 @@ Ideas for Plugins
  - Move tab to the left / right
  - Show floating window with open tabs and buffers
  - NvimTree: autocommands for close
+ - Other plugins: gelguy/wilder.nvim
 
  Plugin: Projects
 
