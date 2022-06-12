@@ -24,6 +24,11 @@ lsp_installer.on_server_ready(function(server)
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
+  if server.name == "cmake" then
+    local cmake_opts = require("user.lsp.settings.cmake")
+    opts = vim.tbl_deep_extend("force", cmake_opts, opts)
+  end
+
   if server.name == "pyright" then
     local pyright_opts = require("user.lsp.settings.pyright")
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
@@ -32,6 +37,11 @@ lsp_installer.on_server_ready(function(server)
   if server.name == "clangd" then
     local clangd_opts = require("user.lsp.settings.clangd")
     opts = vim.tbl_deep_extend("force", clangd_opts, opts)
+  end
+
+  if server.name == "jdtls" then
+    local jdtls_opts = require("user.lsp.settings.jdtls")
+    opts = vim.tbl_deep_extend("force", jdtls_opts, opts)
   end
 
   -- if server.name == "jsonls" then
@@ -66,8 +76,9 @@ local opts = {
 local mappings = {
   l = {
     name = "LSP",
-    i = {"<cmd>LspInfo<cr>",        "Info"          },
-    I = {"<cmd>LspInstallInfo<cr>", "Installer Info"},
+    i = {"<cmd>LspInfo<cr>",        "Info"              },
+    R = {"<cmd>LspRestart<cr>",     "Restart LSP server"},
+    I = {"<cmd>LspInstallInfo<cr>", "Installer Info"    },
   }
 }
 
