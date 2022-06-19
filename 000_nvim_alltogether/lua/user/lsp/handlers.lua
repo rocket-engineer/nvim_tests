@@ -103,6 +103,12 @@ M.on_attach = function(client, bufnr)
 
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
+
+  -- send data to plugin aerial
+  local aerial_status_ok, aerial = pcall(require, "aerial")
+  if aerial_status_ok then
+    aerial.on_attach(client, bufnr)
+  end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

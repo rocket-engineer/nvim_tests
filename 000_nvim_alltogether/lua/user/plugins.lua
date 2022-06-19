@@ -22,12 +22,13 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- autocommand that reloads neovim whenever you save the plugins.lua file
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerSync
---   augroup end
--- ]])
+-- autocmd BufWritePost plugins.lua source <afile> | PackerSync
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile>
+  augroup end
+]])
 
 
 -- =================================================================================================
@@ -81,7 +82,7 @@ require('packer').startup(function(use)
     }
   }
   use {'kyazdani42/nvim-tree.lua'}
-  use {'liuchengxu/vista.vim'}
+  use {'stevearc/aerial.nvim'}
   use {'seblj/nvim-tabline'}
   -- use {'rocket-engineer/nvim-navigation'}
   use {"petertriho/nvim-scrollbar"}
