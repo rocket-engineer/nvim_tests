@@ -7,11 +7,17 @@ Next Activities
  ✔ Install rigrep -> using deb file
  ✔ Plugin: Autopairs & Tabclose - Integration
  ✔ Plugin: LSP Signature (ray-x/lsp_signature)
- + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
- + Plugin: Vim-Better-Whitespace or NeoVim alternative
- + Better TACO integration (is there anything missing - generated code?)
+ ✔ Plugin: Code outline buffer - stevearc/aerial.nvim
+
+ + Plugin: Indentation detection - Darazaki/indent-o-matic
  + Java & LSP (jdtls)
+ - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
+ + Plugin: Vim-Better-Whitespace or NeoVim alternative
+ + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
+
+ + Better TACO integration (is there anything missing - generated code?)
  + Different language settings (indentation, spell check, etc using after)
+ + Plugin: Scrollbar - Better color
 
  + DAP Integration
    * Adapters for C++ and Java
@@ -21,24 +27,31 @@ Next Activities
    * nvim-dap-ui
    * telescope-dap
    * cmp-dap ?
- + Plugin: Scrollbar - Better color, do not show fixed errors
 
  - GoogleTest integration
  - Plugin: Sessions - Make it work (including NVimTree) - jedrzejboczar/possession.nvim ?
  - Plugin: Gitdiff integration - sindrets/diffview.nvim ?
  - Customized tabline: rafcamlet/tabline-framework.nvim
+ - Plugin: Better statusline - feline-nvim/feline.nvim
+ - Plugin: Better folding using LSP - kevinhwang91/nvim-ufo
+ - Plugin: Stick buffers to windows? - stevearc/stickybuf.nvim
  
  - Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
  - Detect whitespace
  - Unicode characters insertion
 
+ - NvimTree improvements
+   * NvimTree: autocommands for close
+   * NvimTree: new keymaps
 
 Found Issues
 ============
 
+ ✔ No virtual text for diagnostics
  - Indent lines in NvimTree
- - No virtual text for diagnostics
- - Indent lines with fluent Result API (normal and focused)
+ - Indent lines: More indentation focus / work with fluent Result API (normal and focused)
+ - NvimTree does not work sometimes (not reproduceable)
+ - LazyGit: Open files in main windows and new tab
 
 
 Ideas for Plugins
@@ -60,9 +73,10 @@ Ideas for Plugins
  - Go to NVimTree, Vista
  - Switch between main windows
  - Go to tab using CTRL-1 - CTRL-0 (tab #1 - #10)
- - Move tab to the left / right
+ - Move tab to the left / right (using CTRL-left and CTRL-right)
  - Show floating window with open tabs and buffers
- - NvimTree: autocommands for close
+ - Open source code file and its header file in new tab
+ - Switch between source code file and its header file and vice versa
  - Other plugins: gelguy/wilder.nvim
 
  Plugin: Projects
