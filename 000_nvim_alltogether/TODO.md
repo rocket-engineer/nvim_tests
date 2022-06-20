@@ -48,7 +48,7 @@ Found Issues
 ============
 
  ✔ No virtual text for diagnostics
- - Indent lines in NvimTree
+ ✔ Indent lines in NvimTree
  - Indent lines: More indentation focus / work with fluent Result API (normal and focused)
  - NvimTree does not work sometimes (not reproduceable)
  - LazyGit: Open files in main windows and new tab

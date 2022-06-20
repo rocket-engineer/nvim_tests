@@ -97,6 +97,19 @@ nvim_tree.setup({
       list        = mappings,
     }
   },
+  renderer = {
+    indent_markers = {
+      enable = true,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+    icons = {
+      webdev_colors = true,
+    },
+  },
   trash = {
     cmd = "trash",
     require_confirm = true
