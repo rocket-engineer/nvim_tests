@@ -6,7 +6,7 @@ Next Activities
  ✔ Make current version work
  ✔ Install rigrep -> using deb file
  ✔ Plugin: Autopairs & Tabclose - Integration
- ✔ Plugin: LSP Signature (ray-x/lsp_signature)
+ ✔ Plugin: LSP Signature - ray-x/lsp_signature
  ✔ Plugin: Code outline buffer - stevearc/aerial.nvim
 
  + Plugin: Indentation detection - Darazaki/indent-o-matic
@@ -38,12 +38,13 @@ Next Activities
  - Plugin: Switch scrollbar? - lewis6991/satellite.nvim
  
  - Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
- - Detect whitespace
+ - Detect whitespae
  - Unicode characters insertion
 
  - NvimTree improvements
    * NvimTree: autocommands for close
    * NvimTree: new keymaps
+
 
 Found Issues
 ============
@@ -58,6 +59,19 @@ Found Issues
 Ideas for Plugins
 =================
 
+ Plugin: Navigation
+
+ - Create first plugin (test environment, config, ...)
+ - Scan the window environment (NVimTree, Vista, main windows)
+ - Go to NvimTree, Aerial
+ - Switch between main windows (using CTRL-k)
+ - Go to tab using CTRL-1 - CTRL-0 (tab #1 - #10)
+ - Move tab to the left / right (using CTRL-left and CTRL-right)
+ - Show floating window with open tabs and buffers and call them
+ - Open source code file and its header file in new tab
+ - Switch between source code file and its header file and vice versa
+ - Other plugins: gelguy/wilder.nvim
+
  Plugin: GoogleTest
 
  - Jump to next/previous test using ]t and [t
@@ -68,22 +82,14 @@ Ideas for Plugins
  - Run all tests 
  - Deliver test binary / test name (complete call) for e.g. DAP
 
- Plugin: Navigation
-
- - Scan the window environment (NVimTree, Vista, main windows)
- - Go to NVimTree, Vista
- - Switch between main windows
- - Go to tab using CTRL-1 - CTRL-0 (tab #1 - #10)
- - Move tab to the left / right (using CTRL-left and CTRL-right)
- - Show floating window with open tabs and buffers
- - Open source code file and its header file in new tab
- - Switch between source code file and its header file and vice versa
- - Other plugins: gelguy/wilder.nvim
-
  Plugin: Projects
 
  - Organize NeoVim projects
  - Store settings in JSON file(s) (project name, LSP compile_commands.json, DAP, etc)
+
+ Plugin: NVCode
+
+  - New github repo for final NVCode environment
 
  Plugin: TODO
 
