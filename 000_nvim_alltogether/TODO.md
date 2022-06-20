@@ -10,7 +10,7 @@ Next Activities
  ✔ Plugin: Code outline buffer - stevearc/aerial.nvim
 
  + Plugin: Indentation detection - Darazaki/indent-o-matic
- + Java & LSP (jdtls)
+ + Java & LSP (jdtls) -> use specific version of jdtls
  - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
  + Plugin: Vim-Better-Whitespace or NeoVim alternative
  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
@@ -35,6 +35,7 @@ Next Activities
  - Plugin: Better statusline - feline-nvim/feline.nvim
  - Plugin: Better folding using LSP - kevinhwang91/nvim-ufo
  - Plugin: Stick buffers to windows? - stevearc/stickybuf.nvim
+ - Plugin: Switch scrollbar? - lewis6991/satellite.nvim
  
  - Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
  - Detect whitespace
