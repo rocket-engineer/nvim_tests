@@ -76,6 +76,8 @@ scrollbar.setup({
   excluded_filetypes = {
     "prompt",
     "TelescopePrompt",
+    "aerial",
+    "NvimTree"
   },
   autocmd = {
     render = {
