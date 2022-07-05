@@ -1,5 +1,5 @@
 
-Next Activities
+Fixed Activities
 ===============
 
  ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
@@ -8,12 +8,15 @@ Next Activities
  ✔ Plugin: Autopairs & Tabclose - Integration
  ✔ Plugin: LSP Signature - ray-x/lsp_signature
  ✔ Plugin: Code outline buffer - stevearc/aerial.nvim
+ ✔ Plugin: Indentation detection - Darazaki/indent-o-matic
 
- + Plugin: Indentation detection - Darazaki/indent-o-matic
- + Java & LSP (jdtls) -> use specific version of jdtls
- - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
+
+Next Activities
+===============
+
  + Plugin: Vim-Better-Whitespace or NeoVim alternative
  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
+ - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
 
  + Better TACO integration (is there anything missing - generated code?)
  + Different language settings (indentation, spell check, etc using after)
@@ -33,9 +36,9 @@ Next Activities
  - Plugin: Gitdiff integration - sindrets/diffview.nvim ?
  - Customized tabline: rafcamlet/tabline-framework.nvim
  - Plugin: Better statusline - feline-nvim/feline.nvim
- - Plugin: Better folding using LSP - kevinhwang91/nvim-ufo
  - Plugin: Stick buffers to windows? - stevearc/stickybuf.nvim
  - Plugin: Switch scrollbar? - lewis6991/satellite.nvim
+ - Plugin: TroubleToggle in floating window
  
  - Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
  - Detect whitespae
@@ -44,6 +47,13 @@ Next Activities
  - NvimTree improvements
    * NvimTree: autocommands for close
    * NvimTree: new keymaps
+
+Weekend ToDo
+------------
+
+ + Java & LSP (jdtls) & DAP -> use specific version of jdtls
+ + Plugin: CMake integration - Shatur/neovim-cmake
+ + Plugin: Better folding using LSP - kevinhwang91/nvim-ufo
 
 
 Found Issues
@@ -87,11 +97,23 @@ Ideas for Plugins
  - Organize NeoVim projects
  - Store settings in JSON file(s) (project name, LSP compile_commands.json, DAP, etc)
 
+ -> Use neovim-cmake and Sessions?
+
+ Plugin: neovim-bauhaus
+
+  - Use null-ls to add Bauhaus findings to LSP diagnostics
+  - Own sign for Bauhaus findings in the gutter
+  - Use Telescope to find current Bauhaus findings
+  - Show current Bauhaus findings in TroubleToggle
+
+ Plugin: neovim-VCA
+
+  - Use null-ls to add VCA findings to LSP diagnostics
+  - Own sign for VCA findings in the gutter
+  - Use Telescope to find current VCA findings
+  - Show current VCA findings in TroubleToggle
+
  Plugin: NVCode
 
   - New github repo for final NVCode environment
-
- Plugin: TODO
-
-  - TODO
 
