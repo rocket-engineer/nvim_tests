@@ -55,6 +55,7 @@ require('user.cmp')
 
 require('user.autopairs')
 require('user.tabout')
+require('user.indent_o_matic')
 -- require('user.google_test')
 
 -- ================================================================================

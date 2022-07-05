@@ -184,6 +184,7 @@ require('packer').startup(function(use)
     'jdhao/better-escape.vim',
     event = 'InsertEnter'
   }
+  use {'Darazaki/indent-o-matic'}
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then
