@@ -19,7 +19,6 @@ Next Activities
  - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
 
  + Better TACO integration (is there anything missing - generated code?)
- + Different language settings (indentation, spell check, etc using after)
  + Plugin: Scrollbar - Better color
 
  + DAP Integration
@@ -40,7 +39,6 @@ Next Activities
  - Plugin: Switch scrollbar? - lewis6991/satellite.nvim
  - Plugin: TroubleToggle in floating window
  
- - Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
  - Detect whitespae
  - Unicode characters insertion
 
@@ -54,6 +52,8 @@ Weekend ToDo
  + Java & LSP (jdtls) & DAP -> use specific version of jdtls
  + Plugin: CMake integration - Shatur/neovim-cmake
  + Plugin: Better folding using LSP - kevinhwang91/nvim-ufo
+ + Different language settings (indentation, spell check, etc using after)
+ + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
 
 
 Found Issues
@@ -64,6 +64,8 @@ Found Issues
  - Indent lines: More indentation focus / work with fluent Result API (normal and focused)
  - NvimTree does not work sometimes (not reproduceable)
  - LazyGit: Open files in main windows and new tab
+ - Nightfox: Better background & gutter colors (NvimTree, Workspace, Aerial), fix line start color problem
+ - Fix LSP signature, use plugin Issafalcon/lsp-overloads
 
 
 Ideas for Plugins
@@ -72,14 +74,17 @@ Ideas for Plugins
  Plugin: Navigation
 
  - Create first plugin (test environment, config, ...)
- - Scan the window environment (NVimTree, Vista, main windows)
- - Go to NvimTree, Aerial
- - Switch between main windows (using CTRL-k)
- - Go to tab using CTRL-1 - CTRL-0 (tab #1 - #10)
- - Move tab to the left / right (using CTRL-left and CTRL-right)
+ - Scan the window environment (NVimTree, Aerial, main windows, etc)
+ - Mappings
+   - Focus NvimTree:               CTRL-a
+   - Focus Aerial:                 CTRL-l
+   - Switch main window:           CTRL-k
+   - Go to tab #1 - #10:           CTRL-1 - CTRL-0
+   - Move tab to the left / right: CTRL-left and CTRL-right
  - Show floating window with open tabs and buffers and call them
  - Open source code file and its header file in new tab
  - Switch between source code file and its header file and vice versa
+   - Open header / source code file in split buffer
  - Other plugins: gelguy/wilder.nvim
 
  Plugin: GoogleTest

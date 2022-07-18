@@ -3,7 +3,7 @@
 -- Module Protection
 -- =================================================================================================
 
-local status_ok, indentomatic = pcall(require, "'indent-o-matic'")
+local status_ok, indentomatic = pcall(require, "indent-o-matic")
 if not status_ok then
   return
 end
