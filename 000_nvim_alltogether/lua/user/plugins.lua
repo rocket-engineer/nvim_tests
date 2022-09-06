@@ -160,6 +160,8 @@ require('packer').startup(function(use)
     },
   }
 
+  -- tooling
+
   -- misc
   use {'djoshea/vim-autoread'}
   use {'folke/which-key.nvim'}
@@ -185,6 +187,7 @@ require('packer').startup(function(use)
     event = 'InsertEnter'
   }
   use {'Darazaki/indent-o-matic'}
+  use {'nvim-treesitter/playground'}
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then
