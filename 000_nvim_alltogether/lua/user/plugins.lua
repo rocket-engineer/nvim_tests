@@ -85,7 +85,8 @@ require('packer').startup(function(use)
   use {'stevearc/aerial.nvim'}
   use {'seblj/nvim-tabline'}
   -- use {'rocket-engineer/nvim-navigation'}
-  use {"petertriho/nvim-scrollbar"}
+  use {'petertriho/nvim-scrollbar'}
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- functionality
   use {

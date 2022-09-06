@@ -53,6 +53,7 @@ require('user.dap')
 require('user.lsp')
 require('user.cmp')
 
+require('user.ufo_folding')
 require('user.autopairs')
 require('user.tabout')
 require('user.indent_o_matic')
