@@ -31,6 +31,15 @@ local options = {
   signcolumn     = "yes",                  -- always show the sign column, otherwise it would shift the text each time
   -- numberwidth = 4,                         -- set number column width to 2 {default 4}
 
+  -- folding
+  foldcolumn = '1',                        -- only one column for folding
+  foldlevel = 99,                          -- using ufo provider need a large value, feel free to decrease the value
+  foldlevelstart = 99,
+  foldenable = true,
+  fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
+
+  -- spell check
+  spell = false,                           -- disable spell checking (is enabled file type specific)
   -- backup and swap settings
   -- backup    = true,                        -- creates a backup file
   -- backupdir = "~/.env/nvim/backup"
