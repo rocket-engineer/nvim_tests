@@ -83,6 +83,23 @@ local function lsp_keymaps(bufnr)
   -- vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
+local function lsp_signature_help_provider(client)
+  if client.server_capabilities.signatureHelpProvider then
+    require('lsp-overloads').setup(client, {
+        ui = {
+          -- The border to use for the signature popup window. Accepts same border values as |nvim_open_win()|.
+          border = "single"
+        },
+        keymaps = {
+          next_signature     = "<C-j>",
+          previous_signature = "<C-k>",
+          next_parameter     = "<C-l>",
+          previous_parameter = "<C-h>",
+        },
+      })
+  end
+end
+
 M.on_attach = function(client, bufnr)
   if client.name == "clangd" then
     client.resolved_capabilities.document_formatting       = false
@@ -103,6 +120,7 @@ M.on_attach = function(client, bufnr)
 
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
+  lsp_signature_help_provider(client)
 
   -- send data to plugin aerial
   local aerial_status_ok, aerial = pcall(require, "aerial")
