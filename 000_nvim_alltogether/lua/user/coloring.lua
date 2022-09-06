@@ -1,11 +1,10 @@
 
 -- local colorscheme = "tokyonight"
--- local colorscheme = "tokyonight"
 local colorscheme = "nightfox"
 
 -- use a protected call
-local status_ok, _ = pcall(require, colorscheme)
-if not status_ok then
+local colorscheme_status_ok, _ = pcall(require, colorscheme)
+if not colorscheme_status_ok then
   return
 end
 
