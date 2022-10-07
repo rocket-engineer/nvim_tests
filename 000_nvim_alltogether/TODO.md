@@ -56,6 +56,35 @@ Weekend ToDo
  + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
 
 
+
+
+
+
+Improvements
+------------
+
+ + Plugin: lukas-reineke/indent-blankline
+   * Indentation focus for environments, lambdas, etc
+   * Newline problem, do not at indentation line for a newline if e.g. function call is over several lines
+   * Work with fluent Result API (normal and focused) -
+   * Irregular (i.e. uneven) indentation (disable indentation?)
+
+ + Plugin: Vim-Better-Whitespace for Lua - zakharykaplan/nvim-retrail
+   * Fix problems
+
+ + Plugin: kevinhwang91/nvim-ufo
+   * Make ufo work again (NeoVim 0.8 + Mason)
+   * Check to work with LSP or treesitter (and configure fallback option)
+   * How to make peekFoldedLinesUnderCursor() work?
+   * Show complete signature and fold only body (customized fold text)
+   * Get kind specification from LSP (class, method, function, comment, for, if, lambda, env, ...) - if possible
+   * Default folding for defined kinds (class, method, function) - openFoldsExceptKinds()
+   * Disable/enable folding for defined kinds
+   * Fold function/method/etc body on last character (in newline) (for C: })
+   * Update scrollbar upon fold/unfold
+   * Update indent guards upon unfold
+   * Build NeoVim 0.8 from sources, including fix for UFO (https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1157722074)
+
 Found Issues
 ============
 
