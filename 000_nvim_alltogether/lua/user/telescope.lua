@@ -14,6 +14,16 @@ end
 -- =================================================================================================
 
 telescope.setup({
+  -- defaults = {
+  --   mappings = {
+  --     i = {
+  --       ['<C-i>'] = require('telescope.actions.layout').toggle_preview
+  --     }
+  --   },
+  --   preview = {
+  --     hide_on_startup = true -- hide previewer when picker starts
+  --   },
+  -- },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
@@ -78,14 +88,14 @@ local mappings = {
     b = {"<cmd>Telescope file_browser<cr>", "File Browser"      },
     c = {"<cmd>Telescope commands<cr>",     "Show Commands"     },
     f = {"<cmd>Telescope find_files<cr>",   "Find Files"        },
-    g = {"<cmd>Telescope live_grep<cr>",    "Live Grep"         },
+    g = {"<cmd>Telescope live_grep<cr>",    "Grep User Word"    },
     h = {"<cmd>Telescope help_tags<cr>",    "Help Pages"        },
     k = {"<cmd>Telescope keymaps<cr>",      "Show Keymaps"      },
     m = {"<cmd>Telescope man_pages<cr>",    "Man Pages"         },
     n = {"<cmd>Telescope notify<cr>",       "Noficiations"      },
     o = {"<cmd>Telescope oldfiles<cr>",     "Open Recent Files" },
-    -- s = {"<cmd>Telescope grep_string<cr>",  "Grep String"       },
-    s = {"<cmd>Telescope luasnip<cr>",      "Show Snippet"      },
+    s = {"<cmd>Telescope grep_string<cr>",  "Grep Cursor String"},
+    S = {"<cmd>Telescope luasnip<cr>",      "Show Snippet"      },
     C = {"<cmd>Telescope colorscheme<cr>",  "Choose Colorscheme"},
   }
 }
