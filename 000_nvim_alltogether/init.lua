@@ -37,6 +37,7 @@ require('user.toggleterm')
 require('user.gitsigns')
 require('user.comment')
 -- require('user.notify')
+-- require('user.navigation')
 
 -- require('user.alpha')
 require('user.lualine')
@@ -53,6 +54,9 @@ require('user.luasnip')
 require('user.dap')
 require('user.lsp')
 require('user.cmp')
+
+-- require('user.cmake')
+-- require('user.google_test')
 
 require('user.ufo_folding')
 require('user.autopairs')

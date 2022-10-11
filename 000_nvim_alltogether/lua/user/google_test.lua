@@ -3,38 +3,34 @@
 -- Module Protection
 -- =================================================================================================
 
--- local status_ok, _ = pcall(require, "vim-gtest")
--- if not status_ok then
---   return
--- end
+local status_ok, googletest = pcall(require, "googletest")
+if not status_ok then
+  return
+end
 
 
 -- =================================================================================================
 -- Configuration
 -- =================================================================================================
 
--- let g:gtest#highlight_failing_tests = 0
+-- get pretty notifier
+local notify_engine = vim.notify
+local notify_status_ok, notify = pcall(require, "notify")
+if notify_status_ok then
+  notify_engine = notify
+end
+
+googletest.setup({
+
+  -- setup notifier
+  notify = notify_engine,
+
+})
 
 
 -- =================================================================================================
 -- Keymaps
 -- =================================================================================================
-
--- Modes
--- * normal_mode       -> "n",
--- * insert_mode       -> "i",
--- * visual_mode       -> "v",
--- * visual_block_mode -> "x",
--- * term_mode         -> "t",
--- * command_mode      -> "c",
-
-local opts = {silent = true, noremap = true}
-
--- shorten function name
-local keymap = vim.api.nvim_set_keymap
-
-keymap("n", "]t", "<cmd>GTestNext<cr>", opts)
-keymap("n", "[t", "<cmd>GTestPrev<cr>", opts)
 
 local wk_ok, wk = pcall(require, "which-key")
 if not wk_ok then
@@ -53,8 +49,10 @@ local wk_opts = {
 local mappings = {
   t = {
     name = "GoogleTest",
-    r = {"<cmd>GTestRunUnderCursor<cr>", "Run Test under Cursor"},
-    R = {"<cmd>GTestRun<cr>",            "Run Test(s)"          },
+    r = {"<cmd>lua require 'googletest.test_run'.gtest_show_test_under_cursor()<cr>",     "Show test name under cursor"    },
+    R = {"<cmd>lua require 'googletest.test_run'.gtest_show_test_set_under_cursor()<cr>", "Show test set name under cursor"},
+    t = {"<cmd>lua require 'googletest.test_run'.gtest_run_test_under_cursor()<cr>",      "Run test under cursor"          },
+    T = {"<cmd>lua require 'googletest.test_run'.gtest_run_test_set_under_cursor()<cr>",  "Run test set under cursor"      },
   }
 }
 

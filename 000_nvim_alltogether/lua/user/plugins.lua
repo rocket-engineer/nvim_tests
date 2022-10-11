@@ -163,6 +163,18 @@ require('packer').startup(function(use)
   }
 
   -- tooling
+  -- use {'Shatur/neovim-cmake',
+  --   requires = {
+  --     {'nvim-lua/plenary.nvim', opt = false},
+  --   }
+  -- }
+  -- use {'/home/vistdn/Misc/Projects/nvim_plugins/nvim-cmake',
+  --   requires = {
+  --     {'nvim-lua/plenary.nvim', opt = false},
+  --   }
+  -- }
+  -- use {'/home/vistdn/Misc/Projects/nvim_plugins/nvim-googletest'}
+  -- use {'nvim-treesitter/playground'}
 
   -- misc
   use {'djoshea/vim-autoread'}
