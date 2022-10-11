@@ -56,6 +56,9 @@ nvim_tree.setup({
   --   enable    = true,
   --   auto_open = true,
   -- },
+  -- add_blank_line_at_top = true,
+  -- hide_root_node = true,
+  -- retain_hidden_root_indent = true,
   diagnostics = {
     enable = false,
     icons = {

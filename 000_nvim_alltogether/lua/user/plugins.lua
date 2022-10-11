@@ -73,6 +73,7 @@ require('packer').startup(function(use)
   -- use {'ellisonleao/gruvbox.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'kyazdani42/nvim-web-devicons'}
+  -- use {'m00qek/baleia.nvim', tag = 'v1.2.0'}
 
   -- work page appearance and navigation
   use {

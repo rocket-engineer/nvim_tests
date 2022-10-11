@@ -13,47 +13,37 @@ end
 -- Configuration
 -- =================================================================================================
 
--- dap_config_cpp_1 = dap_config_cpp
 local dap_config_cpp_1 = {
-  -- next    = dap_config_cpp,
+  name    = "Test 2017 Debugee",
   type    = "lldb",
   request = "launch",
-  -- program = function()
-  --   return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-  -- end,
 
-  -- cwd = '${workspaceFolder}',
-  cwd = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017",
+  cwd     = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017",
+  program = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017/bin/amsr_per_test",
   stopOnEntry = false,
-  args = {},
+  args = function()
+     local test_name = require('googletest.test_run').gtest_show_test_under_cursor()
+     return "--gtest_filter=" .. test_name
+  end,
 
-  -- if you change `runInTerminal` to true, you might need to change the yama/ptrace_scope setting:
-  --
-  --    echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
-  --
-  -- Otherwise you might get the following error:
-  --
-  --    Error on launch: Failed to attach to the target process
-  --
-  -- But you should be aware of the implications:
-  -- https://www.kernel.org/doc/html/latest/admin-guide/LSM/Yama.html
   runInTerminal = false,
-  name    = "Test 2017 Debugee",
-  program = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017/bin/amsr_persistency_test",
 }
 
 local dap_config_cpp_2 = {
+  name    = "Test 2020 Debugee",
   type    = "lldb",
   request = "launch",
 
-  -- cwd = '${workspaceFolder}',
-  cwd = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017",
+  cwd     = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2020",
+  program = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2020/bin/amsr_persistency_test2020",
   stopOnEntry = false,
-  args = {},
+  args = function()
+     local test_name = require('googletest.test_run').gtest_show_test_under_cursor()
+     return "--gtest_filter=" .. test_name
+  end,
+
   runInTerminal = false,
 
-  name    = "Test 2020 Debugee",
-  program = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2020/bin/amsr_persistency_test2020",
 }
 
 dap.adapters.lldb = {
@@ -63,8 +53,8 @@ dap.adapters.lldb = {
 }
 
 dap.configurations.cpp = {
-    dap_config_cpp_1,
-    dap_config_cpp_2,
+  dap_config_cpp_1,
+  dap_config_cpp_2,
   -- {
   --   type    = "lldb",
   --   request = "launch",
