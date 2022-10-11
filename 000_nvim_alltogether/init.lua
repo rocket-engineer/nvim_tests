@@ -49,6 +49,7 @@ require('user.hop')
 
 require('user.luasnip')
 
+-- require('user.mason')
 require('user.dap')
 require('user.lsp')
 require('user.cmp')

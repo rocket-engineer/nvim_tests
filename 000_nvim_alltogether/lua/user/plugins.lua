@@ -131,6 +131,8 @@ require('packer').startup(function(use)
   use {'onsails/lspkind-nvim'}
 
   -- LSP
+  -- use {'williamboman/mason.nvim'}
+  -- use {'williamboman/mason-lspconfig.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'williamboman/nvim-lsp-installer'}
   -- use 'glepnir/lspsaga.nvim'
