@@ -53,6 +53,21 @@ function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
 
+local modify_run = Terminal:new({cmd = "/home/vistdn/Workspace/amsr/repos/modify_compile_commands.py", dir = "/home/vistdn/Workspace/amsr/repos", hidden = true})
+function _MODIFY_TOGGLE()
+	modify_run:toggle()
+end
+
+local test2017run = Terminal:new({cmd = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017/bin/amsr_persistency_test", dir = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2017", hidden = true})
+function _TEST2017_TOGGLE()
+	test2017run:toggle()
+end
+
+local test2020run = Terminal:new({cmd = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2020/bin/amsr_persistency_test", dir = "/home/vistdn/Workspace/amsr/repos/adaptive-microsar/.vscode/per_test2020", hidden = true})
+function _TEST2020_TOGGLE()
+	test2020run:toggle()
+end
+
 
 -- =================================================================================================
 -- Keymaps
@@ -92,8 +107,11 @@ local opts = {
 local mappings = {
   t = {
     name = "Terminal",
-    h = {"<cmd>lua _HTOP_TOGGLE()<cr>",   "htop"  },
-    p = {"<cmd>lua _PYTHON_TOGGLE()<cr>", "Python"},
+    h = {"<cmd>lua _HTOP_TOGGLE()<cr>",     "htop"        },
+    p = {"<cmd>lua _PYTHON_TOGGLE()<cr>",   "Python"      },
+    j = {"<cmd>lua _TEST2017_TOGGLE()<cr>", "Test2017"    },
+    k = {"<cmd>lua _TEST2020_TOGGLE()<cr>", "Test2020"    },
+    l = {"<cmd>lua _MODIFY_TOGGLE()<cr>",   "ModifyScript"},
   }
 }
 
