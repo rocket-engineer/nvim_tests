@@ -117,6 +117,30 @@ luasnip.add_snippets("cpp", {
     -- Last Placeholder, exit Point of the snippet.
     i(0),
   }),
+  -- ToDo
+  s({
+    trig = "todo",
+    namr = "todo_statemnt",
+    dscr = "Add ToDo statement"
+  },
+  {
+    -- start of ToDo
+    t("ToDo"),
+    -- last placeholder, exit point of the snippet.
+    i(0),
+  }),
+  -- Documentation: internal
+  s({
+    trig = "dint",
+    namr = "docu_internal",
+    dscr = "Document internal section"
+  },
+  {
+    -- start of ToDo
+    t("\\internal\n   * ToDo.\n   * \\endinternal"),
+    -- last placeholder, exit point of the snippet.
+    i(0),
+  }),
   -- cout
   s({
     trig = "cout",
