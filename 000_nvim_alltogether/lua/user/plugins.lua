@@ -195,13 +195,14 @@ require('packer').startup(function(use)
     -- after = {'nvim-cmp'},
   }
   -- use {'norcalli/nvim-colorizer.lua'}
-  -- use {'ntpeters/vim-better-whitespace'}
+  -- use {'zakharykaplan/nvim-retrail', tag = '*'}
   use {
     'jdhao/better-escape.vim',
     event = 'InsertEnter'
   }
   use {'Darazaki/indent-o-matic'}
   use {'nvim-treesitter/playground'}
+  -- use {'lewis6991/spellsitter.nvim'}
 
   -- synchronize everything after bootstrap
   if packer_bootstrap then
