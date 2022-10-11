@@ -9,17 +9,18 @@ Fixed Activities
  ✔ Plugin: LSP Signature - ray-x/lsp_signature
  ✔ Plugin: Code outline buffer - stevearc/aerial.nvim
  ✔ Plugin: Indentation detection - Darazaki/indent-o-matic
+ ✔ Plugin: Fix LSP signature - Issafalcon/lsp-overloads
 
 
 Next Activities
 ===============
 
- + Plugin: Vim-Better-Whitespace or NeoVim alternative
  + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
  - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
 
  + Better TACO integration (is there anything missing - generated code?)
  + Plugin: Scrollbar - Better color
+ + Plugin: What plugin to choose for LSP signature?
 
  + DAP Integration
    * Adapters for C++ and Java
@@ -30,7 +31,6 @@ Next Activities
    * telescope-dap
    * cmp-dap ?
 
- - GoogleTest integration
  - Plugin: Sessions - Make it work (including NVimTree) - jedrzejboczar/possession.nvim ?
  - Plugin: Gitdiff integration - sindrets/diffview.nvim ?
  - Customized tabline: rafcamlet/tabline-framework.nvim
@@ -38,8 +38,10 @@ Next Activities
  - Plugin: Stick buffers to windows? - stevearc/stickybuf.nvim
  - Plugin: Switch scrollbar? - lewis6991/satellite.nvim
  - Plugin: TroubleToggle in floating window
- 
- - Detect whitespae
+ - Plugin: Better motion plugin? - ggandor/leap.nvim
+ - Extension: Open Telescope (FindFile / LiveGrep) on current directory in NvimTree - nvim-telescope/telescope-live-grep-args.nvim
+ - Plugin: Browse JSON files - gennaro-tedesco/nvim-jqx
+
  - Unicode characters insertion
 
  - NvimTree improvements
@@ -49,16 +51,22 @@ Next Activities
 Weekend ToDo
 ------------
 
+ + Switch to NeoVim 0.8
+ + Try to use winbar (NeoVim 0.8)-> File name etc from Chris@Machine OR Lualine?
+
+ + Plugin: Installers for LSP/DAP/linters/formatters - williamboman/mason.nvim
  + Java & LSP (jdtls) & DAP -> use specific version of jdtls
- + Plugin: CMake integration - Shatur/neovim-cmake
- + Plugin: Better folding using LSP - kevinhwang91/nvim-ufo
+ 
  + Different language settings (indentation, spell check, etc using after)
  + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
+ 
+ - Plugin: CMake integration - Shatur/neovim-cmake
+ - move semantics for std::vector::push_back()
 
+At Work ToDo
+------------
 
-
-
-
+ + Setup clang-tidy according to confluence article
 
 Improvements
 ------------
@@ -90,41 +98,62 @@ Found Issues
 
  ✔ No virtual text for diagnostics
  ✔ Indent lines in NvimTree
- - Indent lines: More indentation focus / work with fluent Result API (normal and focused)
  - NvimTree does not work sometimes (not reproduceable)
  - LazyGit: Open files in main windows and new tab
+ - LazyGit: Why has it become so slow?
  - Nightfox: Better background & gutter colors (NvimTree, Workspace, Aerial), fix line start color problem
- - Fix LSP signature, use plugin Issafalcon/lsp-overloads
+
+
+Miscellaneous
+=============
+
+ ✔ Setup global ccache
 
 
 Ideas for Plugins
 =================
 
- Plugin: Navigation
-
- - Create first plugin (test environment, config, ...)
- - Scan the window environment (NVimTree, Aerial, main windows, etc)
- - Mappings
-   - Focus NvimTree:               CTRL-a
-   - Focus Aerial:                 CTRL-l
-   - Switch main window:           CTRL-k
-   - Go to tab #1 - #10:           CTRL-1 - CTRL-0
-   - Move tab to the left / right: CTRL-left and CTRL-right
- - Show floating window with open tabs and buffers and call them
- - Open source code file and its header file in new tab
- - Switch between source code file and its header file and vice versa
-   - Open header / source code file in split buffer
- - Other plugins: gelguy/wilder.nvim
-
  Plugin: GoogleTest
 
- - Jump to next/previous test using ]t and [t
- - Add new test template (normal, fixture, typed, parameterized) -> Snippet?
- - Define test binary
- - Run test under cursor in floating window
- - Run test under cursor in tabline
- - Run all tests 
- - Deliver test binary / test name (complete call) for e.g. DAP
+ ✔ Provide filter name of test under cursor
+ ✔ Run test under cursor in floating window
+ ✔ Run test set under cursor in floating window
+ + Jump to next/previous test using ]t and [t
+ - Run all tests, show progress in Lualine
+ ✔ Deliver test binary / test name (complete call) for e.g. DAP
+   -> Moved to CMake plugin
+ ✔ Add new test template (normal, fixture, typed, parameterized)
+   -> Use LuaSnip
+ + Integration into Plugin nvim-neotest/neotest (as runner)
+
+ Plugin: Navigation
+
+ - Scan the window environment (NVimTree, Aerial, main windows, etc)
+ - Mappings
+   - Focus NvimTree:               CTRL-a          :NavFocusNvimTree
+   - Focus Aerial:                 CTRL-l          :NavFocusAerial
+   - Switch main window:           CTRL-k          :NavSwitchMainWin
+   - Go to tab #1 - #10:           CTRL-1 - CTRL-0 :NavTabGoTo(tab_nr)
+   - Move tab to the left / right: CTRL-left       :NavMoveTabLeft
+                                   CTRL-right      :NavMoveTabRight
+ - Show floating window with open tabs and buffers and call them      :NavShowTabs
+ - Open source code file and its header file in new tab               :NavOpenTabWithCouple(filename_prefix_path)
+ - Switch between source code file and its header file and vice versa :NavSwitchMainWin
+   - Open header / source code file in split buffer                   :NavOpenBufWithCoupleSibling(filename_prefix_path)
+ - Other plugins: gelguy/wilder.nvim
+
+ Plugin: CMake Integration
+
+ - Organize NeoVim projects
+ - Store CMake settings in JSON file (configurations, builds, debugging)
+ - Mappings
+   - Choose from all presets:         <leader>cp
+   - Choose from all configurations:  <leader>c?
+   - Call a CMake configuration:      <leader>c1 - <leader>c0
+   - Choose from all builds:          <leader>b?
+   - Call a CMake build :             <leader>b1 - <leader>b0
+   - Choose from all debug sessionss: <leader>d?
+   - Call a debug session:            <leader>d1 - <leader>d0
 
  Plugin: Projects
 
@@ -147,7 +176,21 @@ Ideas for Plugins
   - Use Telescope to find current VCA findings
   - Show current VCA findings in TroubleToggle
 
+ Plugin: null-ls.helper.iwyu
+
+  - Add findings of IWYU to LSP client
+  - Use actions to automatically add/remove includes/classes
+  
  Plugin: NVCode
 
   - New github repo for final NVCode environment
+
+
+Collaborted Plugin Development
+==============================
+
+ Plugin: GoogleTest
+ Plugin: CMake Integration
+ Plugin: neovim-bauhaus
+ Plugin: neovim-VCA
 
