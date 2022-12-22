@@ -10,12 +10,15 @@ Fixed Activities
  ✔ Plugin: Code outline buffer - stevearc/aerial.nvim
  ✔ Plugin: Indentation detection - Darazaki/indent-o-matic
  ✔ Plugin: Fix LSP signature - Issafalcon/lsp-overloads
+ ✔ Plugin: Installers for LSP/DAP/linters/formatters - williamboman/mason.nvim
+ ✔ Use winbar (NeoVim 0.8)-> File name etc from Chris@Machine OR Lualine?
+ ✔ Extension: Open Telescope (FindFile / LiveGrep) on current directory in NvimTree - nvim-telescope/telescope-live-grep-args.nvim
 
 
 Next Activities
 ===============
 
- + Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
+ ✔ Plugin: LuaSnip - Better integration, LuaSnipEdit function, C++ snippets
  - Plugin: Better file tree? - nvim-neo-tree/neo-tree.nvim
 
  + Better TACO integration (is there anything missing - generated code?)
@@ -39,7 +42,6 @@ Next Activities
  - Plugin: Switch scrollbar? - lewis6991/satellite.nvim
  - Plugin: TroubleToggle in floating window
  - Plugin: Better motion plugin? - ggandor/leap.nvim
- - Extension: Open Telescope (FindFile / LiveGrep) on current directory in NvimTree - nvim-telescope/telescope-live-grep-args.nvim
  - Plugin: Browse JSON files - gennaro-tedesco/nvim-jqx
 
  - Unicode characters insertion
@@ -48,25 +50,53 @@ Next Activities
    * NvimTree: autocommands for close
    * NvimTree: new keymaps
 
+
 Weekend ToDo
 ------------
 
- + Switch to NeoVim 0.8
- + Try to use winbar (NeoVim 0.8)-> File name etc from Chris@Machine OR Lualine?
+ - move semantics for std::vector::push_back()
 
- + Plugin: Installers for LSP/DAP/linters/formatters - williamboman/mason.nvim
+ - Switch to NeoVim 0.8.1
+
  + Java & LSP (jdtls) & DAP -> use specific version of jdtls
- 
+
  + Different language settings (indentation, spell check, etc using after)
  + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
- 
- - Plugin: CMake integration - Shatur/neovim-cmake
- - move semantics for std::vector::push_back()
+   * Use LSP to detect variable names
+
+ - Plugin: NeoVim Lua Development - folke/neodev.nvim
+   * Can LSP configured by NeoDev?
+
+ - Plugin: Find header/source file to source/header file - jakemason/ouroboros.nvim
+   * Add API to get source/header file name, OuroborosSourceFileName(opt: file_path), OuroborosHeaderFileName(opt: file_path), OuroborosFileName(opt: file_path)
+   * Add API to check is source/header file name, OuroborosIsPair(source_path, header_path)
+
+ - Plugin: Configurable tabline - nanozuki/tabby.nvim
+   * files_redundancy_check S|H
+
+ - Plugin: IDE Panel Groups - ldelossa/nvim-ide
+   * Highlight overlength lines
+
+   Panel Groups:
+
+   * Left Panel Group:   - File Explorer Panel     -> NvimTree, [TerminalBrowser, ProjectBrowser, SessionBrowser]
+   * Right Panel Group:  - Variable Explorer Panel -> Aerial
+                         - Git Panel               -> Changes, Commits, Timeline, Branches
+   * Bottom Panel Group: - Terminal Panel          -> Terminal
+
+   Defaults:
+   * Open left panel if specified file type: C/C++/Cuda, Python, Bash, ...
+   * Open right panel: - Variable Explorer Panel if LSP active OR
+                       - Git Panel if git repository found
+
+ - Plugin: Highlight current window - nvim-zh/colorful-winsep.nvim
+
 
 At Work ToDo
 ------------
 
  + Setup clang-tidy according to confluence article
+
 
 Improvements
 ------------
@@ -93,101 +123,119 @@ Improvements
    * Update indent guards upon unfold
    * Build NeoVim 0.8 from sources, including fix for UFO (https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1157722074)
 
+
 Found Issues
-============
+------------
 
  ✔ No virtual text for diagnostics
  ✔ Indent lines in NvimTree
  - NvimTree does not work sometimes (not reproduceable)
- - LazyGit: Open files in main windows and new tab
+ - LazyGit: Open files in main windows and new tab, See https://github.com/kdheepak/lazygit.nvim/issues/67
  - LazyGit: Why has it become so slow?
  - Nightfox: Better background & gutter colors (NvimTree, Workspace, Aerial), fix line start color problem
+ - null-ls: Jump to next/last diagnostic finding
 
 
 Miscellaneous
-=============
+-------------
 
  ✔ Setup global ccache
 
 
 Ideas for Plugins
-=================
+-----------------
+
+ Telescope Extension: live_grep_args_plus
+
+  - Grep files only in a specified directory
+  - Open marked file as C++ source and header file in new tab with CTRL-S (split)
+
+ Telescope Extension: find_files_args_plus
+
+  - Find files only in a specified directory
+  - Open marked file as C++ source and header file in new tab with CTRL-S (split)
 
  Plugin: GoogleTest
 
- ✔ Provide filter name of test under cursor
- ✔ Run test under cursor in floating window
- ✔ Run test set under cursor in floating window
- + Jump to next/previous test using ]t and [t
- - Run all tests, show progress in Lualine
- ✔ Deliver test binary / test name (complete call) for e.g. DAP
-   -> Moved to CMake plugin
- ✔ Add new test template (normal, fixture, typed, parameterized)
-   -> Use LuaSnip
- + Integration into Plugin nvim-neotest/neotest (as runner)
+  ✔ Provide filter name of test under cursor
+  ✔ Run test under cursor in floating window
+  ✔ Run test set under cursor in floating window
+  + Jump to next/previous test using ]t and [t
+  - Run all tests, show progress in Lualine
+  ✔ Deliver test binary / test name (complete call) for e.g. DAP
+    -> Moved to CMake plugin
+  ✔ Add new test template (normal, fixture, typed, parameterized)
+    -> Use LuaSnip
+  + Integration into Plugin nvim-neotest/neotest (as runner)
 
  Plugin: Navigation
 
- - Scan the window environment (NVimTree, Aerial, main windows, etc)
- - Mappings
-   - Focus NvimTree:               CTRL-a          :NavFocusNvimTree
-   - Focus Aerial:                 CTRL-l          :NavFocusAerial
-   - Switch main window:           CTRL-k          :NavSwitchMainWin
-   - Go to tab #1 - #10:           CTRL-1 - CTRL-0 :NavTabGoTo(tab_nr)
-   - Move tab to the left / right: CTRL-left       :NavMoveTabLeft
-                                   CTRL-right      :NavMoveTabRight
- - Show floating window with open tabs and buffers and call them      :NavShowTabs
- - Open source code file and its header file in new tab               :NavOpenTabWithCouple(filename_prefix_path)
- - Switch between source code file and its header file and vice versa :NavSwitchMainWin
-   - Open header / source code file in split buffer                   :NavOpenBufWithCoupleSibling(filename_prefix_path)
- - Other plugins: gelguy/wilder.nvim
+  - Wrap ldelossa/nvim-ide: Left/right panel, bottom panel
+  - Scan the window environment (left/right/terminal panels, main windows, etc)
+  - Mappings
+    * Focus toggle left panel:      CTRL-a          :NavFocusToggleLeftPanel
+    * Focus toggle right panel:     CTRL-l          :NavFocusToggleRightPanel
+    * Focus toggle bottom panel:    CTRL-c          :NavFocusToggleBottomPanel
+    * Switch main window:           CTRL-k          :NavSwitchMainWins
+    * Go to last tab:               CTRL-j          :NavGoToLastTab
+    * Go to tab #1 - #10:           CTRL-1 - CTRL-0 :NavGoToTab(tab_nr)
+    * Move tab to the left / right: CTRL-left       :NavMoveTabLeft
+                                    CTRL-right      :NavMoveTabRight
+  - Show floating window with open tabs and buffers and call them      :NavShowTabs
+    * Maybe use LukasPietzschmann/telescope-tabs
+  - Open header or source code file in split buffer                    :NavOpenBufWithCoupleSibling(filename_prefix_path)
+  - Open source code file and its header file in new tab               :NavOpenTabWithCouple(filename_prefix_path)
+  - Other plugins: gelguy/wilder.nvim
+
+ Plugin: Project Settings
+
+  - Organize NeoVim projects
+  - Store project settings in JSON file (configurations, builds, debugging)
 
  Plugin: CMake Integration
 
- - Organize NeoVim projects
- - Store CMake settings in JSON file (configurations, builds, debugging)
- - Mappings
-   - Choose from all presets:         <leader>cp
-   - Choose from all configurations:  <leader>c?
-   - Call a CMake configuration:      <leader>c1 - <leader>c0
-   - Choose from all builds:          <leader>b?
-   - Call a CMake build :             <leader>b1 - <leader>b0
-   - Choose from all debug sessionss: <leader>d?
-   - Call a debug session:            <leader>d1 - <leader>d0
+  - Read CMake Presets
+  -
 
- Plugin: Projects
+  - Mappings
+    - Choose from all presets:         <leader>cp
+    - Choose from all configurations:  <leader>c?
+    - Call a CMake configuration:      <leader>c1 - <leader>c0
+    - Choose from all builds:          <leader>b?
+    - Call a CMake build :             <leader>b1 - <leader>b0
+    - Choose from all debug sessionss: <leader>d?
+    - Call a debug session:            <leader>d1 - <leader>d0
 
- - Organize NeoVim projects
- - Store settings in JSON file(s) (project name, LSP compile_commands.json, DAP, etc)
+ Plugin: null-ls-bauhaus.nvim
 
- -> Use neovim-cmake and Sessions?
+  - Use null-ls to inject Bauhaus findings to LSP diagnostics [DIAGNOSTICS]
+  - Use Telescope to find current Bauhaus findings [HOVER]
+  - Enable/disable Bauhaus findings
 
- Plugin: neovim-bauhaus
+ Plugin: null-ls-VCA.nvim
 
-  - Use null-ls to add Bauhaus findings to LSP diagnostics
-  - Own sign for Bauhaus findings in the gutter
-  - Use Telescope to find current Bauhaus findings
-  - Show current Bauhaus findings in TroubleToggle
-
- Plugin: neovim-VCA
-
-  - Use null-ls to add VCA findings to LSP diagnostics
-  - Own sign for VCA findings in the gutter
+  - Use null-ls to inject VCA findings to LSP diagnostics [DIAGNOSTICS]
+  - Use null-ls to show VCA findings as hover [HOVER]
+  - Enable/disable VCA findints
+  - Get VCA findings from CI (URL/latest CI pipeline from MR)
   - Use Telescope to find current VCA findings
-  - Show current VCA findings in TroubleToggle
 
  Plugin: null-ls.helper.iwyu
 
-  - Add findings of IWYU to LSP client
+  - Use null-ls to inject findings of IWYU to LSP client
   - Use actions to automatically add/remove includes/classes
-  
+
+ Plugin: null-ls-manager.nvim
+
+  - Enabled/disable null-ls helpers in a floating window
+
  Plugin: NVCode
 
-  - New github repo for final NVCode environment
+  + New github repo for final NVCode environment
 
 
 Collaborted Plugin Development
-==============================
+------------------------------
 
  Plugin: GoogleTest
  Plugin: CMake Integration
