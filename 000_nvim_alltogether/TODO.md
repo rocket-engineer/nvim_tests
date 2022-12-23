@@ -102,26 +102,28 @@ Improvements
 ------------
 
  + Plugin: lukas-reineke/indent-blankline
-   * Indentation focus for environments, lambdas, etc
-   * Newline problem, do not at indentation line for a newline if e.g. function call is over several lines
-   * Work with fluent Result API (normal and focused) -
-   * Irregular (i.e. uneven) indentation (disable indentation?)
+   ✔ Work with fluent Result API (normal and focused) - show_current_context = true
+   - Indentation focus for environments, lambdas, etc
+   - Fix problem with lambdas
+   - Irregular (i.e. uneven) indentation (disable indentation?)
+   - Newline problem, do not at indentation line for a newline if e.g. function call is over several lines
 
  + Plugin: Vim-Better-Whitespace for Lua - zakharykaplan/nvim-retrail
-   * Fix problems
+   ✔ Fix problems
 
  + Plugin: kevinhwang91/nvim-ufo
-   * Make ufo work again (NeoVim 0.8 + Mason)
-   * Check to work with LSP or treesitter (and configure fallback option)
-   * How to make peekFoldedLinesUnderCursor() work?
-   * Show complete signature and fold only body (customized fold text)
-   * Get kind specification from LSP (class, method, function, comment, for, if, lambda, env, ...) - if possible
-   * Default folding for defined kinds (class, method, function) - openFoldsExceptKinds()
-   * Disable/enable folding for defined kinds
-   * Fold function/method/etc body on last character (in newline) (for C: })
-   * Update scrollbar upon fold/unfold
-   * Update indent guards upon unfold
-   * Build NeoVim 0.8 from sources, including fix for UFO (https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1157722074)
+   ✔ Make ufo work again (NeoVim 0.8 + Mason)
+   ✔ How to make peekFoldedLinesUnderCursor() work?
+   - Remove scrollbar in fold preview
+   + Build NeoVim 0.8.1 from sources, including fix for UFO (https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1157722074)
+   - Check to work with LSP or treesitter (and configure fallback option)
+   - Show complete signature and fold only body (customized fold text)
+   - Get kind specification from LSP (class, method, function, comment, for, if, lambda, env, ...) - if possible
+   - Default folding for defined kinds (class, method, function) - openFoldsExceptKinds()
+   - Disable/enable folding for defined kinds
+   - Fold function/method/etc body on last character (in newline) (for C: })
+   - Update indent guards upon unfold
+   ? Update scrollbar upon fold/unfold
 
 
 Found Issues
