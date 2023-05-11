@@ -54,27 +54,21 @@ Next Activities
 Weekend ToDo
 ------------
 
- - move semantics for std::vector::push_back()
+ - move semantics for std::vector::push_back(): Universal references etc
 
- - Switch to NeoVim 0.8.1
+ + Switch to NeoVim 0.9.0
 
- + Java & LSP (jdtls) & DAP -> use specific version of jdtls
+ + Plugin: Configurable tabline - nanozuki/tabby.nvim
+   * files_redundancy_check S|H
 
- + Different language settings (indentation, spell check, etc using after)
- + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim ?
+ + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim or native implementation?
    * Use LSP to detect variable names
-
- - Plugin: NeoVim Lua Development - folke/neodev.nvim
-   * Can LSP configured by NeoDev?
 
  - Plugin: Find header/source file to source/header file - jakemason/ouroboros.nvim
    * Add API to get source/header file name, OuroborosSourceFileName(opt: file_path), OuroborosHeaderFileName(opt: file_path), OuroborosFileName(opt: file_path)
    * Add API to check is source/header file name, OuroborosIsPair(source_path, header_path)
 
- - Plugin: Configurable tabline - nanozuki/tabby.nvim
-   * files_redundancy_check S|H
-
- - Plugin: IDE Panel Groups - ldelossa/nvim-ide
+ - Plugin: IDE Panel Groups - ldelossa/nvim-ide (isolated test)
    * Highlight overlength lines
 
    Panel Groups:
@@ -90,6 +84,13 @@ Weekend ToDo
                        - Git Panel if git repository found
 
  - Plugin: Highlight current window - nvim-zh/colorful-winsep.nvim
+
+ + Java & LSP (jdtls) & DAP -> use specific version of jdtls
+
+ + Different language settings (indentation, spell check, etc using after)
+
+ - Plugin: NeoVim Lua Development - folke/neodev.nvim
+   * Can LSP configured by NeoDev?
 
 
 At Work ToDo
