@@ -54,13 +54,17 @@ Next Activities
 Weekend ToDo
 ------------
 
- - move semantics for std::vector::push_back(): Universal references etc
-
+ -> New NeoVim Version
  + Switch to NeoVim 0.9.0
+ - Create customized column ???
 
+ -> Improved Tab Handling
  + Plugin: Configurable tabline - nanozuki/tabby.nvim
    * files_redundancy_check S|H
+ + Remove unused (i.e. not attached) buffers -> increase performace
+ + https://github.com/LukasPietzschmann/telescope-tabs
 
+ -> Enable Spell Checking (only in comments)
  + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim or native implementation?
    * Use LSP to detect variable names
 
@@ -91,6 +95,8 @@ Weekend ToDo
 
  - Plugin: NeoVim Lua Development - folke/neodev.nvim
    * Can LSP configured by NeoDev?
+
+ - move semantics for std::vector::push_back(): Universal references etc
 
 
 At Work ToDo
