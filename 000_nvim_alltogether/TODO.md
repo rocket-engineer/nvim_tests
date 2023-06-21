@@ -1,6 +1,6 @@
 
 Fixed Activities
-===============
+================
 
  ✔ Switch to NeoVim 0.7 -> check Chris@Machine video
  ✔ Make current version work
@@ -43,6 +43,14 @@ Next Activities
  - Plugin: TroubleToggle in floating window
  - Plugin: Better motion plugin? - ggandor/leap.nvim
  - Plugin: Browse JSON files - gennaro-tedesco/nvim-jqx
+ - Plugin: Highlight, list and search ToDo comments - folke/todo-comments
+ - Plugin: Create reviews in NeoVim - pwntester/octo.nvim
+ - Plugin: Continuous testing, show test result in vim-signs - aaronhallaert/continuous-testing.nvim
+ - Plugin: Highlight other uses of the current word - RRethy/vim-illuminate
+ + Plugin: Switch worktrees with telescope - helmecke/telescope-git-worktree.nvim
+ - Plugin: Access stored yanks and clipboard - AckslD/nvim-neoclip.lua
+
+ - Use different terminal (eg kitty, GPU accelerated)
 
  - Unicode characters insertion
 
@@ -55,18 +63,31 @@ Weekend ToDo
 ------------
 
  -> New NeoVim Version
- + Switch to NeoVim 0.9.0
- - Create customized column ???
+  + Switch to NeoVim 0.9.1
+  + Create customized statuscolumn - luukvbaal/statuscol.nvim
 
  -> Improved Tab Handling
- + Plugin: Configurable tabline - nanozuki/tabby.nvim
-   * files_redundancy_check S|H
- + Remove unused (i.e. not attached) buffers -> increase performace
- + https://github.com/LukasPietzschmann/telescope-tabs
+  + Plugin: Configurable tabline - nanozuki/tabby.nvim
+    * files_redundancy_check S|H
+  + Remove unused (i.e. not attached) buffers -> increase performace
+    * Try kazhala/close-buffers.nvim
+  + https://github.com/LukasPietzschmann/telescope-tabs
 
  -> Enable Spell Checking (only in comments)
- + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim or native implementation?
-   * Use LSP to detect variable names
+  + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim or native implementation?
+    * Use LSP to detect variable names
+
+ -> Window Layouts
+  + Plugin: Use predefined window layouts - folke/edgy.nvim
+  + Create my layout
+  + Create shortcuts
+  - Plugin: Highlight current window - nvim-zh/colorful-winsep.nvim
+
+ -> Use kitty as main terminal
+
+ -> Fix tmux / zsh
+  + Fix tmux problems
+  + Fix zsh problems
 
  - Plugin: Find header/source file to source/header file - jakemason/ouroboros.nvim
    * Add API to get source/header file name, OuroborosSourceFileName(opt: file_path), OuroborosHeaderFileName(opt: file_path), OuroborosFileName(opt: file_path)
@@ -121,16 +142,34 @@ Improvements
  + Plugin: kevinhwang91/nvim-ufo
    ✔ Make ufo work again (NeoVim 0.8 + Mason)
    ✔ How to make peekFoldedLinesUnderCursor() work?
-   - Remove scrollbar in fold preview
-   + Build NeoVim 0.8.1 from sources, including fix for UFO (https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1157722074)
+   + Remove scrollbar in fold preview
+   <!-- + Build NeoVim 0.8.1 from sources, including fix for UFO (https://github.com/kevinhwang91/nvim-ufo/issues/4#issuecomment-1157722074) -->
    - Check to work with LSP or treesitter (and configure fallback option)
-   - Show complete signature and fold only body (customized fold text)
+   - Show complete signature and fold only function body (customized fold text)
+   - Update indent guards upon unfold
+   - Show indent guards in preview
+   ? Update scrollbar upon fold/unfold
+
    - Get kind specification from LSP (class, method, function, comment, for, if, lambda, env, ...) - if possible
    - Default folding for defined kinds (class, method, function) - openFoldsExceptKinds()
    - Disable/enable folding for defined kinds
    - Fold function/method/etc body on last character (in newline) (for C: })
-   - Update indent guards upon unfold
-   ? Update scrollbar upon fold/unfold
+   - Extend clangd:
+     - Compile clangd (16.*) from source
+     - Occupy attribute kind in FoldingRange objects for relevant folding types
+       -> Modify
+       -> Enable it via the argument: --ast-custom-folding-ranges
+       -> Functions, structs/classes, lambdas, namespaces, preprocessor variables (#ifdef ... #endif)
+       -> https://github.com/kevinhwang91/nvim-ufo/issues/64
+       -> https://clang.llvm.org/extra/doxygen/SemanticSelection_8cpp_source.html#l00183
+       -> https://clang.llvm.org/extra/doxygen/structclang_1_1clangd_1_1FoldingRange.html
+
+ + LSP: clangd
+   - Specify absolute path to compile_commands.json according to project (or use default behavior)
+
+ + Misc:
+   - Grep for word under cursor (call Telescope)
+   - Grep for visualized word (call Telescope)
 
 
 Found Issues
@@ -192,9 +231,11 @@ Ideas for Plugins
                                     CTRL-right      :NavMoveTabRight
   - Show floating window with open tabs and buffers and call them      :NavShowTabs
     * Maybe use LukasPietzschmann/telescope-tabs
+    * Also show if buffers in the tabs have been modified -> write them all with a keymap
   - Open header or source code file in split buffer                    :NavOpenBufWithCoupleSibling(filename_prefix_path)
   - Open source code file and its header file in new tab               :NavOpenTabWithCouple(filename_prefix_path)
   - Other plugins: gelguy/wilder.nvim
+  - Delete all buffers but the open ones
 
  Plugin: Project Settings
 
@@ -218,14 +259,21 @@ Ideas for Plugins
  Plugin: null-ls-bauhaus.nvim
 
   - Use null-ls to inject Bauhaus findings to LSP diagnostics [DIAGNOSTICS]
+    - Read data base from file (Justifications.txt)
+    - Write extension (hover) for null-ls
   - Use Telescope to find current Bauhaus findings [HOVER]
   - Enable/disable Bauhaus findings
 
  Plugin: null-ls-VCA.nvim
 
+  + Use null-ls to show VCA findings as hover [HOVER]
+    - Read data base from file (Justifications_VCA.txt)
+    + Write extension (hover) for null-ls
   - Use null-ls to inject VCA findings to LSP diagnostics [DIAGNOSTICS]
-  - Use null-ls to show VCA findings as hover [HOVER]
-  - Enable/disable VCA findints
+    - Read data base from file (Findings.txt)
+    - Write extension (diagnostic) for null-ls to show findings
+    - Write extension (action) for null-ls to remove finding from database
+  - Enable/disable VCA findings
   - Get VCA findings from CI (URL/latest CI pipeline from MR)
   - Use Telescope to find current VCA findings
 
@@ -241,6 +289,39 @@ Ideas for Plugins
  Plugin: NVCode
 
   + New github repo for final NVCode environment
+  + Framework with integrations:
+    - git (branches, worktrees (w/ branches), )
+
+ Plugin: nvcode-config.nvim
+
+  -> NVCode plugin for NeoVim session / project configuration
+     Namespace: nvcode.config.*
+
+  - Create JSON file to store settings for a NeoVim session / project
+  - Create NeoVim plugin to (automatically) read config file and provide data to plugins
+
+ Plugin: nvcode-cmake-integration.nvim
+
+  -> NVCode plugin for integrating CMake into NeoVim
+     Namespace: nvcode.cmake_integration.*
+
+  - Choosing current preset
+  - Configuring CMake projects
+  - Building targets
+  - Executing ccmake in NeoVim (floating window, needs path to build dir)
+
+ Plugin: nvcode-code-review.nvim
+
+  -> NVCode plugin for accessing MRs, writing and editing reviews / comments / labels / reactions
+     Namespace: nvcode.code_review.*
+
+  - Start from octo.nvim and/or gh.nvim and write new plugin
+  - Goal: * Create / edit reviews
+          * Add / modify comments
+          * Add / modify labels
+          * Add / modify reactions
+          * Show pipelines
+          * Show TestReports
 
 
 Collaborted Plugin Development
@@ -250,4 +331,16 @@ Collaborted Plugin Development
  Plugin: CMake Integration
  Plugin: neovim-bauhaus
  Plugin: neovim-VCA
+
+
+ToDo List
+---------
+
+ + Go to NeoVim 0.9
+ + Finish Weekend ToDos
+ - Write own plugins:
+   - nvcode-config            : Read in and access runtime settings of current NeoVim instance
+   - nvcode-cmake-integration : CMake integration into NeoVim, Presets / Configuration / Building targets / Providing executables of targets
+   - null-ls-manager          : Manage null-ls extensions
+ - Become familiar with gh tool and pluings octo.nvim and/or gh.nvim
 
