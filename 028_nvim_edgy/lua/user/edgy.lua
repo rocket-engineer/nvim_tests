@@ -37,7 +37,7 @@ edgy.setup({
       filter = function(buf)
         return vim.b[buf].neo_tree_source == "buffers"
       end,
-      pinned = false,
+      pinned = true,
       open = "Neotree position=top buffers",
     },
   },
@@ -49,10 +49,20 @@ edgy.setup({
       pinned = true,
       open = "AerialOpen",
     },
+    {
+      title = "Git Status",
+      ft = "neo-tree",
+      filter = function(buf)
+        return vim.b[buf].neo_tree_source == "git_status"
+      end,
+      pinned = true,
+      open = "Neotree position=top git_status",
+    },
   },
 
   bottom = {
-    { ft = "qf",
+    {
+      ft = "qf",
       title = "QuickFix",
       pinned = true,
       open = "copen",
