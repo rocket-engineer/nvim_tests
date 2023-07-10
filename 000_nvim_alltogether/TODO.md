@@ -64,24 +64,29 @@ Weekend ToDo
 
  -> New NeoVim Version
   + Switch to NeoVim 0.9.1
+    - Remove treesitter-playground plugin
   + Create customized statuscolumn - luukvbaal/statuscol.nvim
 
  -> Improved Tab Handling
-  + Plugin: Configurable tabline - nanozuki/tabby.nvim
-    * files_redundancy_check S|H
-  + Remove unused (i.e. not attached) buffers -> increase performace
+  ✔ Remove unused (i.e. not attached) buffers -> increase performace
     * Try kazhala/close-buffers.nvim
+  + Plugin: Configurable tabline - nanozuki/tabby.nvim
+    * Establish own customization
+      -> files_redundancy_check S|H
   + https://github.com/LukasPietzschmann/telescope-tabs
+    * Establish own customization
 
  -> Enable Spell Checking (only in comments)
   + Spell check in comments (only in comments for some languages) - lewis6991/spellsitter.nvim or native implementation?
     * Use LSP to detect variable names
 
  -> Window Layouts
-  + Plugin: Use predefined window layouts - folke/edgy.nvim
+  ✔ Plugin: Use predefined window layouts - folke/edgy.nvim
+    * tab page support is required
+    * Fix problems
   + Create my layout
   + Create shortcuts
-  - Plugin: Highlight current window - nvim-zh/colorful-winsep.nvim
+  ✔ Plugin: Highlight current window - nvim-zh/colorful-winsep.nvim
 
  -> Use kitty as main terminal
 
@@ -116,6 +121,25 @@ Weekend ToDo
 
  - Plugin: NeoVim Lua Development - folke/neodev.nvim
    * Can LSP configured by NeoDev?
+
+ - Keymaps for unicode characters:
+   - ✔, ...
+
+ - Setup neotest
+   * Use symbols in the status column to show whether a test was not run / successfull / failed
+   * Use symbols in the status column to show where a test failed (using LSP diagnostics injection)
+   * Define specific tests in project config file (using filter argument)
+   * Keymaps: - <leader>tl : Run last test
+              - <leader>ts : Show summary
+              - [t         : Goto previous test
+              - ]t         : Goto next test
+              - <leader>tt : Run test under cursor
+              - <leader>tT : Run test suite under cursor
+              - <leader>tr : Run all tests
+              - <leader>tR : Run all tests in current file
+              - <leader>ts : Run specific tests (defined in project config file)
+              - <leader>td : Debug test under cursor
+              - <leader>tT : Debug test suite under cursor
 
  - move semantics for std::vector::push_back(): Universal references etc
 
@@ -336,7 +360,7 @@ Collaborted Plugin Development
 ToDo List
 ---------
 
- + Go to NeoVim 0.9
+ + Go to NeoVim 0.9.1
  + Finish Weekend ToDos
  - Write own plugins:
    - nvcode-config            : Read in and access runtime settings of current NeoVim instance
