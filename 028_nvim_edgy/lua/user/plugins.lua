@@ -65,7 +65,10 @@ require('packer').startup(function(use)
   use {'kyazdani42/nvim-web-devicons'}
 
   -- plugin to test
-  use {"folke/edgy.nvim"}
+  use {
+    "folke/edgy.nvim",
+    tag = "stable",
+  }
   use {"nvim-zh/colorful-winsep.nvim"}
 
   -- fellow plugins
