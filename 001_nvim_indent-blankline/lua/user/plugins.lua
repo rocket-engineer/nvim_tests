@@ -75,7 +75,7 @@ require('packer').startup(function(use)
   -- misc
   use {
     'lukas-reineke/indent-blankline.nvim',
-    branch = 'v3',
+    -- branch = 'v3',
     requires = {
       {'nvim-treesitter/nvim-treesitter', opt = true}
     },
